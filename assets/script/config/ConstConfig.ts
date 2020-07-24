@@ -2,6 +2,7 @@ const {ccclass, property} = cc._decorator;
 
 @ccclass
 export class ConstConfig extends cc.Component {
+
     /**
      * 运动停止速度
      */
@@ -35,17 +36,17 @@ export class ConstConfig extends cc.Component {
     /**
      * 跑动动画名称
      */
-    public static readonly ANIMATION_RUN: string = "heroRun";
+    public static readonly ANIMATION_RUN: string = 'heroRun';
 
     /**
      * 静止动画名称
      */
-    public static readonly ANIMATION_STATIC: string = "heroStatic";
+    public static readonly ANIMATION_STATIC: string = 'heroStatic';
 
     /**
      * 攻击动画名称
      */
-    public static readonly ANIMATION_ATTACK: string = "heroAttack";
+    public static readonly ANIMATION_ATTACK: string = 'heroAttack';
 
     /**
      * 角色反向角度
@@ -75,22 +76,22 @@ export class ConstConfig extends cc.Component {
     /**
      * 主角分组 
      */
-    public static readonly HERO_GROUP_NAME: string = "hero";
+    public static readonly HERO_GROUP_NAME: string = 'hero';
 
     /**
      * 怪物分组 
      */
-    public static readonly MONSTER_GROUP_NAME: string = "monster";
+    public static readonly MONSTER_GROUP_NAME: string = 'monster';
 
     /**
      * 攻击分组 
      */
-    public static readonly ATTACK_GROUP_NAME: string = "attack_effect";
+    public static readonly ATTACK_GROUP_NAME: string = 'attack_effect';
 
     /**
      * monster1名称
      */
-    public static readonly MONSTER1_NAME: string = "monster1";
+    public static readonly MONSTER1_NAME: string = 'monster1';
 
     /**
      * monster1运动距离
@@ -110,7 +111,7 @@ export class ConstConfig extends cc.Component {
     /**
      * monster2名称
      */
-    public static readonly MONSTER2_NAME: string = "monster2";
+    public static readonly MONSTER2_NAME: string = 'monster2';
 
      /**
      * monster2血量

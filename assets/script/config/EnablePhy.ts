@@ -2,17 +2,18 @@ const {ccclass, property} = cc._decorator;
 
 @ccclass
 export class EnablePhy extends cc.Component {
+
     /**
      * 引擎默认重力
      */
     @property(cc.Vec2)
-    private gravity: cc.Vec2 = cc.v2(0,-320);
+    private gravity: cc.Vec2 = cc.v2(0, -320);
  
     /**
      * 是否开启debug模式
      */
     @property
-    private isDebug: boolean  = false;
+    private isDebug: boolean = false;
 
     protected onLoad(): void{
 
@@ -23,14 +24,15 @@ export class EnablePhy extends cc.Component {
         cc.director.getPhysicsManager().gravity = this.gravity;
 
         // 配置调试区域
-        if(this.isDebug){
+        if (this.isDebug) {
             const Bits: any = cc.PhysicsManager.DrawBits;
+
             cc.director.getPhysicsManager().debugDrawFlags = Bits.e_aabbBit |
             Bits.e_pairBit |
             Bits.e_centerOfMassBit |
             Bits.e_jointBit |
             Bits.e_shapeBit;
-        }else{
+        } else {
             cc.director.getPhysicsManager().debugDrawFlags = 0;
         }
 

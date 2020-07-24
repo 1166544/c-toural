@@ -10,7 +10,7 @@ export class PlayAttackEffectR extends cc.Component {
     private speed: number = ConstConfig.ATTACKEFFECT_SPEED;
 
     protected onLoad():void{
-        cc.log("释放技能")
+        cc.log('释放技能');
     }
 
     protected update(dt: number): void{
@@ -19,7 +19,7 @@ export class PlayAttackEffectR extends cc.Component {
 
     public onCollisionEnter(other: any, self: any): void {
         this.node.destroy();
-        cc.log("清除技能")
+        cc.log('清除技能');
     }
 
 }

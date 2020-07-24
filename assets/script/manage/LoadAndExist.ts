@@ -17,13 +17,13 @@ export class LoadAndExist extends cc.Component {
 
     protected onLoad(): void{
         // 设置点击事件
-        this.exitButton.on(cc.Node.EventType.TOUCH_START,this.exitGame,this);
-        this.exitButton.on(cc.Node.EventType.TOUCH_END,this.exitGameCancel,this);
-        this.exitButton.on(cc.Node.EventType.TOUCH_CANCEL,this.exitGameCancel,this);
+        this.exitButton.on(cc.Node.EventType.TOUCH_START, this.exitGame, this);
+        this.exitButton.on(cc.Node.EventType.TOUCH_END, this.exitGameCancel, this);
+        this.exitButton.on(cc.Node.EventType.TOUCH_CANCEL, this.exitGameCancel, this);
 
-        this.loadButton.on(cc.Node.EventType.TOUCH_START,this.loadGame,this);
-        this.loadButton.on(cc.Node.EventType.TOUCH_END,this.loadGameCancel,this);
-        this.loadButton.on(cc.Node.EventType.TOUCH_CANCEL,this.loadGameCancel,this);
+        this.loadButton.on(cc.Node.EventType.TOUCH_START, this.loadGame, this);
+        this.loadButton.on(cc.Node.EventType.TOUCH_END, this.loadGameCancel, this);
+        this.loadButton.on(cc.Node.EventType.TOUCH_CANCEL, this.loadGameCancel, this);
     }
 
     /**
@@ -55,7 +55,7 @@ export class LoadAndExist extends cc.Component {
         this.loadButton.scaleX = 1.7;
         this.loadButton.scaleY = 1.7;
         // 加载游戏
-        cc.director.loadScene("game");
+        cc.director.loadScene('game');
     }
 
     /**

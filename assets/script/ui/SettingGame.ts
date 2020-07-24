@@ -11,9 +11,9 @@ export class SettingGame extends cc.Component {
 
     protected onLoad(): void{
         // 设置点击事件
-        this.settingButton.on(cc.Node.EventType.TOUCH_START,this.settingPress,this);
-        this.settingButton.on(cc.Node.EventType.TOUCH_END,this.settingPressCancel,this);
-        this.settingButton.on(cc.Node.EventType.TOUCH_CANCEL,this.settingPressCancel,this);
+        this.settingButton.on(cc.Node.EventType.TOUCH_START, this.settingPress, this);
+        this.settingButton.on(cc.Node.EventType.TOUCH_END, this.settingPressCancel, this);
+        this.settingButton.on(cc.Node.EventType.TOUCH_CANCEL, this.settingPressCancel, this);
     }
 
     /**

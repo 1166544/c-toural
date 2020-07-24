@@ -4,6 +4,7 @@ const {ccclass, property} = cc._decorator;
 
 @ccclass
 export class HeroControl extends cc.Component {
+
     /**
      * 左移按钮
      */
@@ -83,7 +84,7 @@ export class HeroControl extends cc.Component {
     /**
      * 角色血量，默认为100
      */
-    private  static heroBlood: number = ConstConfig.HERO_BLOOD;
+    private static heroBlood: number = ConstConfig.HERO_BLOOD;
 
     /**
      * 角色血条
@@ -108,21 +109,21 @@ export class HeroControl extends cc.Component {
         HeroControl.heroBlood = ConstConfig.HERO_BLOOD;
         
         // 注册按钮事件
-        this.rightButton.on(cc.Node.EventType.TOUCH_START,this.rigthButtonClick,this);
-        this.rightButton.on(cc.Node.EventType.TOUCH_END,this.rightButtonClickCancel,this);
-        this.rightButton.on(cc.Node.EventType.TOUCH_CANCEL,this.rightButtonClickCancel,this);
+        this.rightButton.on(cc.Node.EventType.TOUCH_START, this.rigthButtonClick, this);
+        this.rightButton.on(cc.Node.EventType.TOUCH_END, this.rightButtonClickCancel, this);
+        this.rightButton.on(cc.Node.EventType.TOUCH_CANCEL, this.rightButtonClickCancel, this);
 
-        this.leftButton.on(cc.Node.EventType.TOUCH_START,this.leftButtonClick,this);
-        this.leftButton.on(cc.Node.EventType.TOUCH_END,this.leftButtonClickCancel,this);
-        this.leftButton.on(cc.Node.EventType.TOUCH_CANCEL,this.leftButtonClickCancel,this);
+        this.leftButton.on(cc.Node.EventType.TOUCH_START, this.leftButtonClick, this);
+        this.leftButton.on(cc.Node.EventType.TOUCH_END, this.leftButtonClickCancel, this);
+        this.leftButton.on(cc.Node.EventType.TOUCH_CANCEL, this.leftButtonClickCancel, this);
 
-        this.attackButton.on(cc.Node.EventType.TOUCH_START,this.attackButtonClick,this);
-        this.attackButton.on(cc.Node.EventType.TOUCH_END,this.attackButtonClickCancel,this);
-        this.attackButton.on(cc.Node.EventType.TOUCH_CANCEL,this.attackButtonClickCancel,this);
+        this.attackButton.on(cc.Node.EventType.TOUCH_START, this.attackButtonClick, this);
+        this.attackButton.on(cc.Node.EventType.TOUCH_END, this.attackButtonClickCancel, this);
+        this.attackButton.on(cc.Node.EventType.TOUCH_CANCEL, this.attackButtonClickCancel, this);
 
-        this.jumpButton.on(cc.Node.EventType.TOUCH_START,this.jumpButtonClick,this);
-        this.jumpButton.on(cc.Node.EventType.TOUCH_END,this.jumpButtonClickCancel,this);
-        this.jumpButton.on(cc.Node.EventType.TOUCH_CANCEL,this.jumpButtonClickCancel,this);
+        this.jumpButton.on(cc.Node.EventType.TOUCH_START, this.jumpButtonClick, this);
+        this.jumpButton.on(cc.Node.EventType.TOUCH_END, this.jumpButtonClickCancel, this);
+        this.jumpButton.on(cc.Node.EventType.TOUCH_CANCEL, this.jumpButtonClickCancel, this);
 
         // 注册键盘事件
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
@@ -131,7 +132,7 @@ export class HeroControl extends cc.Component {
         // 摄像机边界
         this.cameraLeftMaxX = ConstConfig.CAMERA_LEFT_MAXX;
         this.cameraRightMaxX = ConstConfig.CAMERA_RIGHT_MAXX;
-        this.cameraUpMaxY = cc.winSize.height/2;
+        this.cameraUpMaxY = cc.winSize.height / 2;
     }
 
     /**
@@ -140,7 +141,7 @@ export class HeroControl extends cc.Component {
      */
     private onKeyDown(event: cc.Event.EventKeyboard): void{
 
-        switch(event.keyCode) {
+        switch (event.keyCode) {
             case cc.macro.KEY.a:
                 this.leftButtonClick();
                 break;
@@ -161,7 +162,7 @@ export class HeroControl extends cc.Component {
      * @param enent 事件
      */
     private onKeyUp(event: cc.Event.EventKeyboard): void{
-        switch(event.keyCode) {
+        switch (event.keyCode) {
             case cc.macro.KEY.a:
                 this.leftButtonClickCancel();
                 break;
@@ -188,12 +189,13 @@ export class HeroControl extends cc.Component {
         this.rightButton.scaleY = 1.2;
 
         // 判断角色朝向
-        if(this.hero.scaleX === -ConstConfig.HERO_SCALEX){
+        if (this.hero.scaleX === -ConstConfig.HERO_SCALEX) {
             this.hero.scaleX = ConstConfig.HERO_SCALEX;
         }
 
         // 播放运动动画
         let heroAnimation: cc.Animation = this.hero.getComponent(cc.Animation);
+
         heroAnimation.play(ConstConfig.ANIMATION_RUN);
 
         // 设置速度为80
@@ -206,7 +208,7 @@ export class HeroControl extends cc.Component {
      * 右按钮取消事件
      */
     public rightButtonClickCancel(): void {
-        cc.log("右按钮取消");
+        cc.log('右按钮取消');
 
         // 设置按钮缩放
         this.rightButton.scaleX = ConstConfig.HERO_SCALE_NOMAL;
@@ -214,6 +216,7 @@ export class HeroControl extends cc.Component {
 
         // 停止移动动画
         let heroAnimation: cc.Animation = this.hero.getComponent(cc.Animation);
+
         heroAnimation.stop(ConstConfig.ANIMATION_RUN);
         heroAnimation.play(ConstConfig.ANIMATION_STATIC);
 
@@ -233,12 +236,13 @@ export class HeroControl extends cc.Component {
         this.leftButton.scaleY = ConstConfig.HERO_SCALE;
 
         // 判断角色朝向
-        if(this.hero.scaleX === ConstConfig.HERO_SCALEX){
+        if (this.hero.scaleX === ConstConfig.HERO_SCALEX) {
             this.hero.scaleX = -ConstConfig.HERO_SCALEX;
         }
 
         // 播放运动动画
         let heroAnimation: cc.Animation = this.hero.getComponent(cc.Animation);
+
         heroAnimation.play(ConstConfig.ANIMATION_RUN);
 
         // 设置速度为-80
@@ -258,6 +262,7 @@ export class HeroControl extends cc.Component {
 
         // 停止移动动画
         let heroAnimation: cc.Animation = this.hero.getComponent(cc.Animation);
+
         heroAnimation.stop(ConstConfig.ANIMATION_RUN);
 
         // 播放站立动画
@@ -280,21 +285,24 @@ export class HeroControl extends cc.Component {
 
         // 停止移动动画
         const heroAnimation: cc.Animation = this.hero.getComponent(cc.Animation);
+
         heroAnimation.stop(ConstConfig.ANIMATION_RUN);
 
         // 播放攻击动画
         heroAnimation.play(ConstConfig.ANIMATION_ATTACK);
 
         // 产生攻击特效
-        if(this.hero.scaleX > 0) {
+        if (this.hero.scaleX > 0) {
             // 产生向右的攻击特效
-            let attackEffectR: cc.Node =  cc.instantiate(this.attackEffectR);
+            let attackEffectR: cc.Node = cc.instantiate(this.attackEffectR);
+
             attackEffectR.parent = this.hero.parent;
             attackEffectR.x = this.hero.x;
             attackEffectR.y = this.hero.y;
         } else {
             // 产生向左的攻击特效
-            let attackEffectL: cc.Node =  cc.instantiate(this.attackEffectL);
+            let attackEffectL: cc.Node = cc.instantiate(this.attackEffectL);
+
             attackEffectL.parent = this.hero.parent;
             attackEffectL.x = this.hero.x;
             attackEffectL.y = this.hero.y;
@@ -313,15 +321,17 @@ export class HeroControl extends cc.Component {
 
         // 停止攻击动画
         let heroAnimation: cc.Animation = this.hero.getComponent(cc.Animation);
+
         heroAnimation.play(ConstConfig.ANIMATION_ATTACK);
 
         // 播放站立动画
         heroAnimation.play(ConstConfig.ANIMATION_STATIC);
-        if(HeroControl.runState){
+        if (HeroControl.runState) {
             // 播放运动动画
-            let heroAnimation: cc.Animation = this.hero.getComponent(cc.Animation);
-            heroAnimation.stop(ConstConfig.ANIMATION_STATIC);
-            heroAnimation.play(ConstConfig.ANIMATION_RUN);
+            const heroAnimationScope: cc.Animation = this.hero.getComponent(cc.Animation);
+
+            heroAnimationScope.stop(ConstConfig.ANIMATION_STATIC);
+            heroAnimationScope.play(ConstConfig.ANIMATION_RUN);
         }
     }
 
@@ -334,32 +344,34 @@ export class HeroControl extends cc.Component {
         // 设置按钮缩放
         this.jumpButton.scaleX = ConstConfig.HERO_SCALE;
         this.jumpButton.scaleY = ConstConfig.HERO_SCALE;
-        if(cc.director.getActionManager().getNumberOfRunningActionsInTarget(this.hero) === 0){
+        if (cc.director.getActionManager().getNumberOfRunningActionsInTarget(this.hero) === 0) {
             // 停止移动动画
             let heroAnimation: cc.Animation = this.hero.getComponent(cc.Animation);
+
             heroAnimation.stop(ConstConfig.ANIMATION_RUN);
             this.speedY = ConstConfig.SPEED_JUMP;
 
             //  跳跃上升
-            let jumpUp = cc.jumpTo(1, HeroControl.heroX, this.hero.y ,this.speedY,1);
+            let jumpUp = cc.jumpTo(1, HeroControl.heroX, this.hero.y, this.speedY, 1);
 
             //  添加一个回调函数，用于在动作结束时调用我们定义的其他方法
             let callback = cc.callFunc(this.jumpOver, this);
 
             // 添加动作列表
-            let seq = cc.sequence(jumpUp,callback);
+            let seq = cc.sequence(jumpUp, callback);
 
             // 播放动作
             this.hero.runAction(seq);
-        }else{
+        } else {
             return;
         }
     }
 
     private jumpOver(): void{
-        if(HeroControl.runState){
+        if (HeroControl.runState) {
             // 播放运动动画
             let heroAnimation: cc.Animation = this.hero.getComponent(cc.Animation);
+
             heroAnimation.play(ConstConfig.ANIMATION_RUN);
         }
     }
@@ -380,6 +392,7 @@ export class HeroControl extends cc.Component {
      */
     private updateCameraPosition(dt: number): void {
         let target = this.hero.position;
+
         if (target.x < this.cameraLeftMaxX) {
             target.x = this.cameraLeftMaxX;
         }
@@ -388,7 +401,7 @@ export class HeroControl extends cc.Component {
         }
         this.camer.node.x = target.x;
         this.camer.node.y = 0;
-        if (target.y > (this.cameraUpMaxY - 155)) {
+        if (target.y > this.cameraUpMaxY - 155) {
             //  target.y = this.cameraUpMaxY - 155;
             this.camer.node.y = target.y - 220;
         }
@@ -412,19 +425,20 @@ export class HeroControl extends cc.Component {
      */
     public onCollisionEnter(other: any, self: any): void {
         // 碰撞到了怪物
-        if(other.node.group === ConstConfig.MONSTER_GROUP_NAME){
+        if (other.node.group === ConstConfig.MONSTER_GROUP_NAME) {
             // 判断人物朝向
-            if(this.hero.scaleX > 0){
+            if (this.hero.scaleX > 0) {
                 // 朝右反弹
                 this.hero.x -= 2;
-            }else{
+            } else {
                 // 朝左反弹
                 this.hero.x += 2;
             }
             // 播放闪烁动画
-            let action: cc.ActionInterval  = cc.blink(1,5);
-            let callFun:cc.ActionInstant = cc.callFunc(this.displayHero,this);
-            let seq: cc.ActionInterval = cc.sequence(action,callFun);
+            let action: cc.ActionInterval = cc.blink(1, 5);
+            let callFun:cc.ActionInstant = cc.callFunc(this.displayHero, this);
+            let seq: cc.ActionInterval = cc.sequence(action, callFun);
+
             this.hero.runAction(seq);
             this.reduceBlood(other.node.name);
         }
@@ -444,26 +458,27 @@ export class HeroControl extends cc.Component {
      */
     private reduceBlood(monsterName: string): void{
         // 判断怪物类型
-        switch(monsterName){
+        switch (monsterName) {
             case ConstConfig.MONSTER1_NAME:
                 // 角色血量减少
-                HeroControl.heroBlood = HeroControl.heroBlood - ConstConfig.MONSTER1_ATTACK;
+                HeroControl.heroBlood -= ConstConfig.MONSTER1_ATTACK;
                 break;
             case ConstConfig.MONSTER2_NAME:
                 // 角色血量减少
-                HeroControl.heroBlood = HeroControl.heroBlood - ConstConfig.MONSTER2_ATTACK;
+                HeroControl.heroBlood -= ConstConfig.MONSTER2_ATTACK;
                 break;
             default:
                 break;
         }
 
         // 角色死了
-        if(HeroControl.heroBlood <= 0){
-            cc.director.loadScene("over");
+        if (HeroControl.heroBlood <= 0) {
+            cc.director.loadScene('over');
         }
         
         // 血条同步
         let bloodSprite: cc.Sprite = this.bloodBar.getComponent(cc.Sprite);
+
         bloodSprite.fillRange = HeroControl.heroBlood / 100;
     }
 

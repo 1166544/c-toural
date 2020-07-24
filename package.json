@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "cross-env LINT=1 eslint --ext .js,.ts assets",
+    "lint": "cross-env LINT=1 eslint --fix --ext .js,.ts assets",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "husky": {
