@@ -70,7 +70,7 @@
 
 	/**  第三方插件库配置 */
 	"px2rem-plus.base": 100,
-	"workbench.iconTheme": "vscode-icons",
+	"workbench.iconTheme": "vscode-great-icons",
 	"workbench.startupEditor": "newUntitledFile",
 	"liveServer.settings.donotShowInfoMsg": true,
 	// 自动导入

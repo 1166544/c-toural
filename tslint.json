@@ -2,7 +2,7 @@
 	"defaultSeverity": "error",
 	"extends": ["tslint-config-alloy"],
 	"linterOptions": {
-		"exclude": ["e2e/*", "src/server/*-spec.ts", "e2e/*-spec.ts", "src/server/nuxt/index.ts", "nuxt.config.ts", "config/env.config.ts"]
+		"exclude": ["node_modules", ".vscode", "library", "local", "settings", "temp"]
 	},
 	"jsRules": {
 		"no-unused-expression": true

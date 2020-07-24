@@ -1,35 +1,24 @@
 {
-  "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "jsx": "preserve",
-	"baseUrl": "./",
-	"paths": {
-		"*": ["types/*"]
+	"compilerOptions": {
+		"target": "es6",
+		"module": "commonjs",
+		"jsx": "preserve",
+		"baseUrl": "./",
+		"paths": {
+			"*": ["types/*"]
+		},
+		"moduleResolution": "node",
+		"strict": false,
+		"noEmit": true,
+		"allowJs": true,
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"isolatedModules": true,
+		"resolveJsonModule": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"forceConsistentCasingInFileNames": true
 	},
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "moduleResolution": "node",
-    "strict": false,
-    "noEmit": true,
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "isolatedModules": true,
-    "resolveJsonModule": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "forceConsistentCasingInFileNames": true
-  },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+	"include": ["**/*.ts"],
+	"exclude": ["node_modules", ".vscode", "library", "local", "settings", "temp"]
 }
