@@ -5,18 +5,18 @@ const {ccclass, property} = cc._decorator;
 export class Monster1 extends cc.Component {
 
     /**
-     * 怪物1（蛤蟆怪）
+     * 怪物1（蛤蟆怪）.
      */
     @property(cc.Node)
     private monster1: cc.Node = null;
 
     /**
-     * monster1血量，默认为20
+     * Monster1血量，默认为20.
      */
     private static monster1Blood: number = ConstConfig.MONSTER1_BLOOD;
 
     /**
-     * 怪物跳跃次数
+     * 怪物跳跃次数.
      */
     private static runTag: number = 0;
 
@@ -38,7 +38,9 @@ export class Monster1 extends cc.Component {
     }
 
     /**
-     * 蛤蟆怪1自动跳跃函数
+     * 蛤蟆怪1自动跳跃函数.
+     *
+     * @example
      */
     private monster1Run(): void{
         let monsterAnimation1: cc.Animation = this.monster1.getComponent(cc.Animation);
@@ -72,9 +74,11 @@ export class Monster1 extends cc.Component {
     }
 
     /**
-     * 碰撞检测
-     * @param other
-     * @param self 
+     * 碰撞检测.
+     *
+     * @param other - Other.
+     * @param self - Self.
+     * @example
      */
     public onCollisionEnter(other: any, self: any): void {
         // 如果碰撞到了攻击特效
@@ -95,8 +99,10 @@ export class Monster1 extends cc.Component {
     }
 
      /**
-     * 显示人物
-     */
+      * 显示人物.
+      *
+      * @example
+      */
     private displayHero() :void{
         this.monster1.opacity = 255;
         this.monster1.active = true;

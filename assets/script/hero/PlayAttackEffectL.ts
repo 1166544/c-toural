@@ -5,7 +5,7 @@ const {ccclass, property} = cc._decorator;
 export class PlayAttackEffectR extends cc.Component {
 
     /**
-     * 技能运行速度
+     * 技能运行速度.
      */
     private speed: number = ConstConfig.ATTACKEFFECT_SPEED;
 

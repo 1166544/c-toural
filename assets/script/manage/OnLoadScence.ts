@@ -4,13 +4,13 @@ const {ccclass, property} = cc._decorator;
 export class OnLoadScence extends cc.Component {
 
     /**
-     * 开始游戏按钮
+     * 开始游戏按钮.
      */
     @property(cc.Node)
     private startButton: cc.Node = null;
 
     /**
-     * 进度条填充
+     * 进度条填充.
      */
     @property(cc.Sprite)
     private processUi: cc.Sprite = null;
@@ -26,7 +26,9 @@ export class OnLoadScence extends cc.Component {
     }
 
     /**
-     * 切换场景
+     * 切换场景.
+     *
+     * @example
      */
     private changeScence(): void{
         // 进度条显示
@@ -48,7 +50,9 @@ export class OnLoadScence extends cc.Component {
     }
 
     /**
-     * 按钮取消
+     * 按钮取消.
+     *
+     * @example
      */
     private changeScenceOver(): void{
         // button变大

@@ -5,18 +5,18 @@ const {ccclass, property} = cc._decorator;
 export class Monster2 extends cc.Component {
 
     /**
-     * 怪物2（葫芦怪）
+     * 怪物2（葫芦怪）.
      */
     @property(cc.Node)
     private monster2: cc.Node = null;
 
     /**
-     * monster2血量，默认为20
+     * Monster2血量，默认为20.
      */
     private static monster2Blood: number = ConstConfig.MONSTER2_BLOOD;
 
     /**
-     * 速度
+     * 速度.
      */
     private speed: number = 30;
 
@@ -32,13 +32,27 @@ export class Monster2 extends cc.Component {
     protected start(): void{
         // hole
     }
-
+    
+    /**
+     * Update.
+     *
+     * @protected
+     * @param dt - Date time.
+     * @memberof Monster2
+     * @returns
+     * @example
+     */
     protected update(dt: number): void{
         // hole
     }
 
     /**
-     * 葫芦怪1自动行走函数
+     * 葫芦怪1自动行走函数.
+     *
+     * @private
+     * @memberof Monster2
+     * @returns
+     * @example
      */
     private monster2Run(): void{
         if (this.monster2.scaleX < 0) {
@@ -58,9 +72,6 @@ export class Monster2 extends cc.Component {
         }
     }
 
-    /**
-     * 改变怪物方向
-     */
     private changeDirection():void{
         if (this.monster2.scaleX > 0) {
             this.monster2.scaleX = -1.5;
@@ -69,11 +80,6 @@ export class Monster2 extends cc.Component {
         }
     }
 
-    /**
-     * 碰撞检测
-     * @param other
-     * @param self 
-     */
     public onCollisionEnter(other: any, self: any): void {
         // 如果碰撞到了攻击特效
         if (other.node.group === ConstConfig.ATTACK_GROUP_NAME) {
@@ -92,9 +98,6 @@ export class Monster2 extends cc.Component {
         }
     }
 
-     /**
-     * 显示人物
-     */
     private displayHero() :void{
         this.monster2.opacity = 255;
         this.monster2.active = true;

@@ -4,8 +4,8 @@ const {ccclass, property} = cc._decorator;
 export class SettingGame extends cc.Component {
 
      /**
-     * 设置按钮
-     */
+      * 设置按钮.
+      */
     @property(cc.Node)
     private settingButton: cc.Node = null;
 
@@ -16,9 +16,7 @@ export class SettingGame extends cc.Component {
         this.settingButton.on(cc.Node.EventType.TOUCH_CANCEL, this.settingPressCancel, this);
     }
 
-    /**
-     * 设置
-     */
+    
     private settingPress(): void{
         // 按钮缩放
         this.settingButton.scaleX = 1.2;
@@ -26,7 +24,12 @@ export class SettingGame extends cc.Component {
     }
 
     /**
-     * 按钮取消
+     * 按钮取消.
+     *
+     * @private
+     * @memberof SettingGame
+     * @returns
+     * @example
      */
     private settingPressCancel(): void{
         // 按钮缩放

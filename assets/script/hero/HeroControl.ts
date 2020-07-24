@@ -6,100 +6,100 @@ const {ccclass, property} = cc._decorator;
 export class HeroControl extends cc.Component {
 
     /**
-     * 左移按钮
+     * 左移按钮.
      */
     @property(cc.Node)
     private leftButton: cc.Node = null;
 
     /**
-     * 右移按钮
+     * 右移按钮.
      */
     @property(cc.Node)
     private rightButton: cc.Node = null;
 
     /**
-     * 攻击按钮
+     * 攻击按钮.
      */
     @property(cc.Node)
     private attackButton: cc.Node = null;
 
     /**
-     * 跳跃按钮
+     * 跳跃按钮.
      */
     @property(cc.Node)
     private jumpButton: cc.Node = null;
 
     /**
-     * 横向速度
+     * 横向速度.
      */
     private speedX: number = 0;
 
     /**
-     * 纵向速度
+     * 纵向速度.
      */
     private speedY: number = 0;
 
     /**
-     * 角色
+     * 角色.
      */
     @property(cc.Node)
     private hero: cc.Node = null;
 
     /**
-     * 主摄像头
+     * 主摄像头.
      */
     @property(cc.Camera)
     private camer: cc.Camera = null;
 
     /**
-     * 摄像机左边界
+     * 摄像机左边界.
      */
     private cameraLeftMaxX: number = 0;
 
     /**
-     * 摄像机右边界
+     * 摄像机右边界.
      */
     private cameraRightMaxX: number = 0;
 
     /**
-     * 摄像机上边界
+     * 摄像机上边界.
      */
     private cameraUpMaxY: number = 0;
 
     /**
-     * 摄像机下边界
+     * 摄像机下边界.
      */
     private cameraDownMaxY: number = 0;
 
     /**
-     * 角色x坐标
+     * 角色x坐标.
      */
     private static heroX: number = 0;
 
     /**
-     * 角色运动状态 true- 正在运动 false- 其他状态
+     * 角色运动状态 true- 正在运动 false- 其他状态.
      */
     private static runState: boolean = false;
 
     /**
-     * 角色血量，默认为100
+     * 角色血量，默认为100.
      */
     private static heroBlood: number = ConstConfig.HERO_BLOOD;
 
     /**
-     * 角色血条
+     * 角色血条.
      */
     @property(cc.Node)
     private bloodBar: cc.Node = null;
 
     /**
-     * 攻击特效
+     * 攻击特效.
      */
     @property(cc.Prefab)
     private attackEffectL: cc.Prefab = null;
 
     /**
-     * 攻击特效
+     * 攻击特效.
      */
     @property(cc.Prefab)
     private attackEffectR: cc.Prefab = null;
@@ -136,8 +136,10 @@ export class HeroControl extends cc.Component {
     }
 
     /**
-     * 键盘按下事件
-     * @param event 事件
+     * 键盘按下事件.
+     *
+     * @param event - 事件.
+     * @example
      */
     private onKeyDown(event: cc.Event.EventKeyboard): void{
 
@@ -159,7 +161,10 @@ export class HeroControl extends cc.Component {
 
     /**
      * 键盘抬起
-     * @param enent 事件
+     *
+     * @private
+     * @param event - 事件
+     * @memberof HeroControl
      */
     private onKeyUp(event: cc.Event.EventKeyboard): void{
         switch (event.keyCode) {
@@ -180,8 +185,9 @@ export class HeroControl extends cc.Component {
     
     /**
      * 右按钮点击事件函数
-     * @param targer 点击事件控制节点
-     * @param data 数据
+     *
+     * @private
+     * @memberof HeroControl
      */
     private rigthButtonClick(): void{
         // 设置按钮缩放
@@ -205,8 +211,10 @@ export class HeroControl extends cc.Component {
     }
 
      /**
-     * 右按钮取消事件
-     */
+      * 右按钮取消事件.
+      *
+      * @example
+      */
     public rightButtonClickCancel(): void {
         cc.log('右按钮取消');
 
@@ -227,8 +235,9 @@ export class HeroControl extends cc.Component {
 
     /**
      * 左按钮点击事件函数
-     * @param targer 点击事件控制节点
-     * @param data 数据
+     *
+     * @private
+     * @memberof HeroControl
      */
     private leftButtonClick(): void{
         // 设置按钮缩放
@@ -252,8 +261,9 @@ export class HeroControl extends cc.Component {
  
     /**
      * 左按钮取消事件函数
-     * @param targer 点击事件控制节点
-     * @param data 数据
+     *
+     * @private
+     * @memberof HeroControl
      */
     private leftButtonClickCancel(): void{
         // 设置按钮缩放
@@ -275,8 +285,9 @@ export class HeroControl extends cc.Component {
 
     /**
      * 攻击按钮点击事件函数
-     * @param targer 点击事件控制节点
-     * @param data 数据
+     *
+     * @private
+     * @memberof HeroControl
      */
     private attackButtonClick(): void{
         // 设置按钮缩放
@@ -311,8 +322,9 @@ export class HeroControl extends cc.Component {
 
     /**
      * 攻击按钮取消事件函数
-     * @param targer 点击事件控制节点
-     * @param data 数据
+     *
+     * @private
+     * @memberof HeroControl
      */
     private attackButtonClickCancel(): void{
         // 设置按钮缩放
@@ -337,8 +349,10 @@ export class HeroControl extends cc.Component {
 
     /**
      * 跳跃按钮点击事件函数
-     * @param targer 点击事件控制节点
-     * @param data 数据
+     *
+     * @private
+     * @returns 无返回值 
+     * @memberof HeroControl
      */
     private jumpButtonClick(): void{
         // 设置按钮缩放
@@ -378,8 +392,9 @@ export class HeroControl extends cc.Component {
 
     /**
      * 跳跃按钮取消事件函数
-     * @param targer 点击事件控制节点
-     * @param data 数据
+     *
+     * @private
+     * @memberof HeroControl
      */
     private jumpButtonClickCancel(): void{
         // 设置按钮缩放正常
@@ -389,6 +404,10 @@ export class HeroControl extends cc.Component {
 
     /**
      * 更新摄像机位置，超出摄像机最大距离则停止移动摄像机
+     *
+     * @private
+     * @param dt - Date time
+     * @memberof HeroControl
      */
     private updateCameraPosition(dt: number): void {
         let target = this.hero.position;
@@ -409,7 +428,10 @@ export class HeroControl extends cc.Component {
 
     /**
      * 刷新函数
-     * @param dt 
+     *
+     * @protected
+     * @param dt - date
+     * @memberof HeroControl
      */
     protected update(dt: number): void{
         // 角色移动
@@ -420,8 +442,10 @@ export class HeroControl extends cc.Component {
 
     /**
      * 碰撞检测
-     * @param other 
-     * @param self 
+     *
+     * @param other - Other
+     * @param self - Self
+     * @memberof HeroControl
      */
     public onCollisionEnter(other: any, self: any): void {
         // 碰撞到了怪物
@@ -445,7 +469,9 @@ export class HeroControl extends cc.Component {
     }
 
     /**
-     * 显示人物
+     * 显示人物.
+     *
+     * @example
      */
     private displayHero() :void{
         this.hero.opacity = 255;
@@ -453,8 +479,10 @@ export class HeroControl extends cc.Component {
     }
 
     /**
-     * 触碰怪物降低角色血量
-     * @param monsterName 怪物名称
+     * 触碰怪物降低角色血量.
+     *
+     * @param monsterName - 怪物名称.
+     * @example
      */
     private reduceBlood(monsterName: string): void{
         // 判断怪物类型

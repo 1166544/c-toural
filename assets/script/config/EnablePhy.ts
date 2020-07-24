@@ -4,13 +4,13 @@ const {ccclass, property} = cc._decorator;
 export class EnablePhy extends cc.Component {
 
     /**
-     * 引擎默认重力
+     * 引擎默认重力.
      */
     @property(cc.Vec2)
     private gravity: cc.Vec2 = cc.v2(0, -320);
  
     /**
-     * 是否开启debug模式
+     * 是否开启debug模式.
      */
     @property
     private isDebug: boolean = false;
