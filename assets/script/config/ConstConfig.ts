@@ -5,17 +5,17 @@ export class ConstConfig extends cc.Component {
     /**
      * 运动停止速度
      */
-    public static readonly  SPEED_STOP: number = 0;
+    public static readonly SPEED_STOP: number = 0;
 
     /**
      * 运动速度
      */
-    public static readonly  SPEED_RUN: number = 500;
+    public static readonly SPEED_RUN: number = 500;
 
     /**
      * 跳跃速度
      */
-    public static readonly  SPEED_JUMP: number = 300;
+    public static readonly SPEED_JUMP: number = 300;
 
     /**
      * 技能运行速度
@@ -25,52 +25,52 @@ export class ConstConfig extends cc.Component {
     /**
      * 角色血量
      */
-    public static readonly  HERO_BLOOD: number = 100;
+    public static readonly HERO_BLOOD: number = 100;
 
     /**
      * 角色攻击力
      */
-    public static readonly  HERO_ATTACK: number = 10;
+    public static readonly HERO_ATTACK: number = 10;
 
     /**
      * 跑动动画名称
      */
-    public static readonly  ANIMATION_RUN: string = "heroRun";
+    public static readonly ANIMATION_RUN: string = "heroRun";
 
     /**
      * 静止动画名称
      */
-    public static readonly  ANIMATION_STATIC: string = "heroStatic";
+    public static readonly ANIMATION_STATIC: string = "heroStatic";
 
     /**
      * 攻击动画名称
      */
-    public static readonly  ANIMATION_ATTACK: string = "heroAttack";
+    public static readonly ANIMATION_ATTACK: string = "heroAttack";
 
     /**
      * 角色反向角度
      */
-    public static readonly  HERO_SCALEX: number = 2.5;
+    public static readonly HERO_SCALEX: number = 2.5;
 
     /**
      * 按钮缩放
      */
-    public static readonly  HERO_SCALE: number = 1.2;
+    public static readonly HERO_SCALE: number = 1.2;
 
     /**
      * 按钮正常
      */
-    public static readonly  HERO_SCALE_NOMAL: number = 1;
+    public static readonly HERO_SCALE_NOMAL: number = 1;
 
     /**
      * 摄像机左边最大边界
      */
-    public static readonly  CAMERA_LEFT_MAXX: number = 30;
+    public static readonly CAMERA_LEFT_MAXX: number = 30;
 
     /**
      * 摄像机右边最大边界
      */
-    public static readonly  CAMERA_RIGHT_MAXX: number = 8800;
+    public static readonly CAMERA_RIGHT_MAXX: number = 8800;
 
     /**
      * 主角分组 

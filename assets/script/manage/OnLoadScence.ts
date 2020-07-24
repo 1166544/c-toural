@@ -32,11 +32,13 @@ export class OnLoadScence extends cc.Component {
         // 进度条显示
         this.processBar.opacity = 255;
         let i: number = 0;
+        const that: any = this;
+
         // 加载进度条
-        this.schedule(function(){
-            this.processUi.fillRange = i/100;
+        this.schedule(() => {
+            that.processUi.fillRange = i/100;
             i+=10;
-        },0.05,10);
+        }, 0.05,10);
         // 跳转场景
         this.scheduleOnce(function(){
             // 进度条加载完成,跳转场景

@@ -41,7 +41,7 @@ export class Monster1 extends cc.Component {
      */
     private monster1Run(): void{
         let monsterAnimation1: cc.Animation = this.monster1.getComponent(cc.Animation);
-        if(Monster1.runTag != 0){
+        if(Monster1.runTag !== 0){
             Monster1.runTag = 0;
             // 获取monster1动画
             this.monster1.scaleX = -1.5;
@@ -74,7 +74,7 @@ export class Monster1 extends cc.Component {
      */
     public onCollisionEnter(other: any, self: any): void {
         // 如果碰撞到了攻击特效
-        if(other.node.group == ConstConfig.ATTACK_GROUP_NAME){
+        if(other.node.group === ConstConfig.ATTACK_GROUP_NAME){
             // 播放闪烁动画
             let action: cc.ActionInterval  = cc.blink(1,5);
             let callFun:cc.ActionInstant = cc.callFunc(this.displayHero,this);

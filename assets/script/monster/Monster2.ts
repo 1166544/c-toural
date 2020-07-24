@@ -29,10 +29,11 @@ export class Monster2 extends cc.Component {
     }
 
     protected start(): void{
-
+        // hole
     }
 
     protected update(dt: number): void{
+        // hole
     }
 
     /**
@@ -72,7 +73,7 @@ export class Monster2 extends cc.Component {
      */
     public onCollisionEnter(other: any, self: any): void {
         // 如果碰撞到了攻击特效
-        if(other.node.group == ConstConfig.ATTACK_GROUP_NAME){
+        if(other.node.group === ConstConfig.ATTACK_GROUP_NAME){
             // 播放闪烁动画
             let action: cc.ActionInterval  = cc.blink(1,5);
             let callFun:cc.ActionInstant = cc.callFunc(this.displayHero,this);

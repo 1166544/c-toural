@@ -188,7 +188,7 @@ export class HeroControl extends cc.Component {
         this.rightButton.scaleY = 1.2;
 
         // 判断角色朝向
-        if(this.hero.scaleX == -ConstConfig.HERO_SCALEX){
+        if(this.hero.scaleX === -ConstConfig.HERO_SCALEX){
             this.hero.scaleX = ConstConfig.HERO_SCALEX;
         }
 
@@ -205,7 +205,7 @@ export class HeroControl extends cc.Component {
      /**
      * 右按钮取消事件
      */
-    rightButtonClickCancel() {
+    public rightButtonClickCancel(): void {
         cc.log("右按钮取消");
 
         // 设置按钮缩放
@@ -233,7 +233,7 @@ export class HeroControl extends cc.Component {
         this.leftButton.scaleY = ConstConfig.HERO_SCALE;
 
         // 判断角色朝向
-        if(this.hero.scaleX == ConstConfig.HERO_SCALEX){
+        if(this.hero.scaleX === ConstConfig.HERO_SCALEX){
             this.hero.scaleX = -ConstConfig.HERO_SCALEX;
         }
 
@@ -334,7 +334,7 @@ export class HeroControl extends cc.Component {
         // 设置按钮缩放
         this.jumpButton.scaleX = ConstConfig.HERO_SCALE;
         this.jumpButton.scaleY = ConstConfig.HERO_SCALE;
-        if(cc.director.getActionManager().getNumberOfRunningActionsInTarget(this.hero) == 0){
+        if(cc.director.getActionManager().getNumberOfRunningActionsInTarget(this.hero) === 0){
             // 停止移动动画
             let heroAnimation: cc.Animation = this.hero.getComponent(cc.Animation);
             heroAnimation.stop(ConstConfig.ANIMATION_RUN);
@@ -378,7 +378,7 @@ export class HeroControl extends cc.Component {
     /**
      * 更新摄像机位置，超出摄像机最大距离则停止移动摄像机
      */
-    private updateCameraPosition(dt: number) {
+    private updateCameraPosition(dt: number): void {
         let target = this.hero.position;
         if (target.x < this.cameraLeftMaxX) {
             target.x = this.cameraLeftMaxX;
@@ -392,7 +392,6 @@ export class HeroControl extends cc.Component {
             //  target.y = this.cameraUpMaxY - 155;
             this.camer.node.y = target.y - 220;
         }
-        
     }
 
     /**
@@ -411,9 +410,9 @@ export class HeroControl extends cc.Component {
      * @param other 
      * @param self 
      */
-    onCollisionEnter(other: any, self: any) {
+    public onCollisionEnter(other: any, self: any): void {
         // 碰撞到了怪物
-        if(other.node.group == ConstConfig.MONSTER_GROUP_NAME){
+        if(other.node.group === ConstConfig.MONSTER_GROUP_NAME){
             // 判断人物朝向
             if(this.hero.scaleX > 0){
                 // 朝右反弹
