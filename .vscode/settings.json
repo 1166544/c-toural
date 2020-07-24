@@ -1,11 +1,124 @@
 {
-  "eslint.enable": true,
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "eslint.validate": [
-    "javascript",
-    {
-      "language": "typescript",
-      "autoFix": true
-    }
-  ]
+	/**  vscode 系统配置项 */
+	"window.zoomLevel": 0,
+	"files.autoSave": "afterDelay",
+	"explorer.confirmDelete": false,
+	"explorer.confirmDragAndDrop": false,
+	"vsicons.dontShowNewVersionMessage": true,
+	"editor.foldingStrategy": "indentation",
+	"git.autofetch": true,
+	"git.enableSmartCommit": true,
+	"editor.tabCompletion": "on",
+	"editor.codeActionsOnSave": {
+		"source.fixAll.tslint": true
+	},
+	"editor.accessibilitySupport": "off",
+	"terminal.integrated.rendererType": "dom",
+
+	/**  代码格式化配置 */
+	"editor.tabSize": 4,
+	// 打开对vue的lint,并自动fix
+	// "eslint.validate": [
+	// 	"javascript",
+	// 	"javascriptreact",
+	// 	{
+	// 		"language": "vue",
+	// 		"autoFix": true
+	// 	}
+	// ],
+	// 尽可能控制尾随逗号的打印
+	"prettier.trailingComma": "all",
+	// 在保存时格式化文件
+	"editor.formatOnSave": true,
+	// 保存时自动fix
+	// "eslint.autoFixOnSave": true,
+	"tslint.autoFixOnSave": true,
+	// 格式化插件的配置
+	"vetur.format.defaultFormatterOptions": {
+		"js-beautify-html": {}
+	},
+	// 对于.vue文件,交给prettier,stylus因为prettier不支持改用vertur选项
+	"vetur.format.defaultFormatter.html": "js-beautify-html",
+	"vetur.format.defaultFormatter.css": "prettier",
+	"vetur.format.defaultFormatter.postcss": "prettier",
+	"vetur.format.defaultFormatter.scss": "prettier",
+	"vetur.format.defaultFormatter.less": "prettier",
+	"vetur.format.defaultFormatter.stylus": "stylus-supremacy",
+	"vetur.format.defaultFormatter.js": "prettier",
+	"vetur.format.defaultFormatter.ts": "prettier",
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[scss]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+
+	/**  第三方插件库配置 */
+	"px2rem-plus.base": 100,
+	"workbench.iconTheme": "vscode-icons",
+	"workbench.startupEditor": "newUntitledFile",
+	"liveServer.settings.donotShowInfoMsg": true,
+	// 自动导入
+	"typescript.updateImportsOnFileMove.enabled": "prompt",
+	"javascript.updateImportsOnFileMove.enabled": "prompt",
+	"javascript.suggest.autoImports": true,
+	// 文件修改自动载入作者与时间
+	"fileheader.configObj": {
+		"createFileTime": true,
+		"language": {
+			"languagetest": {
+				"head": "/$$",
+				"middle": " $ @",
+				"end": " $/"
+			}
+		},
+		"autoAdd": false,
+		"autoAlready": true,
+		"annotationStr": {
+			"head": "/*",
+			"middle": " * @",
+			"end": " */",
+			"use": false
+		},
+		"headInsertLine": {
+			"php": 2
+		},
+		"beforeAnnotation": {},
+		"afterAnnotation": {},
+		"specialOptions": {},
+		"switch": {
+			"newlineAddAnnotation": true
+		},
+		"config": {
+			"dateFormat": "YYYY-MM-DD HH:mm:ss",
+			"prohibitAutoAdd": ["json"],
+			"moveCursor": true
+		}
+	},
+	"fileheader.cursorMode": {},
+	"fileheader.customMade": {
+		"Author": "ZStop",
+		"Date": "Do not edit", // 文件创建时间(不变)
+		"LastEditors": "ZStop", // 文件最后编辑者
+		"LastEditTime": "Do not edit" // 文件最后编辑时间
+	},
+	"diffEditor.ignoreTrimWhitespace": false,
+	"[vue]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
 }
