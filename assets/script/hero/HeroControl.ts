@@ -211,7 +211,7 @@ export class HeroControl extends cc.Component {
 		}
 
 		// 播放运动动画
-		let heroAnimation: cc.Animation = this.hero.getComponent(cc.Animation);
+		const heroAnimation: cc.Animation = this.hero.getComponent(cc.Animation);
 
 		heroAnimation.play(ConstConfig.ANIMATION_RUN);
 
@@ -233,7 +233,7 @@ export class HeroControl extends cc.Component {
 		this.rightButton.scaleY = ConstConfig.HERO_SCALE_NOMAL;
 
 		// 停止移动动画
-		let heroAnimation: cc.Animation = this.hero.getComponent(cc.Animation);
+		const heroAnimation: cc.Animation = this.hero.getComponent(cc.Animation);
 
 		heroAnimation.stop(ConstConfig.ANIMATION_RUN);
 		heroAnimation.play(ConstConfig.ANIMATION_STATIC);
@@ -260,7 +260,7 @@ export class HeroControl extends cc.Component {
 		}
 
 		// 播放运动动画
-		let heroAnimation: cc.Animation = this.hero.getComponent(cc.Animation);
+		const heroAnimation: cc.Animation = this.hero.getComponent(cc.Animation);
 
 		heroAnimation.play(ConstConfig.ANIMATION_RUN);
 
@@ -281,11 +281,10 @@ export class HeroControl extends cc.Component {
 		this.leftButton.scaleY = ConstConfig.HERO_SCALE_NOMAL;
 
 		// 停止移动动画
-		let heroAnimation: cc.Animation = this.hero.getComponent(cc.Animation);
-
-		heroAnimation.stop(ConstConfig.ANIMATION_RUN);
+		const heroAnimation: cc.Animation = this.hero.getComponent(cc.Animation);
 
 		// 播放站立动画
+		heroAnimation.stop(ConstConfig.ANIMATION_RUN);
 		heroAnimation.play(ConstConfig.ANIMATION_STATIC);
 
 		// 设置速度为0
@@ -307,22 +306,21 @@ export class HeroControl extends cc.Component {
 		// 停止移动动画
 		const heroAnimation: cc.Animation = this.hero.getComponent(cc.Animation);
 
-		heroAnimation.stop(ConstConfig.ANIMATION_RUN);
-
 		// 播放攻击动画
+		heroAnimation.stop(ConstConfig.ANIMATION_RUN);
 		heroAnimation.play(ConstConfig.ANIMATION_ATTACK);
 
 		// 产生攻击特效
 		if (this.hero.scaleX > 0) {
 			// 产生向右的攻击特效
-			let attackEffectR: cc.Node = cc.instantiate(this.attackEffectR);
+			const attackEffectR: cc.Node = cc.instantiate(this.attackEffectR);
 
 			attackEffectR.parent = this.hero.parent;
 			attackEffectR.x = this.hero.x;
 			attackEffectR.y = this.hero.y;
 		} else {
 			// 产生向左的攻击特效
-			let attackEffectL: cc.Node = cc.instantiate(this.attackEffectL);
+			const attackEffectL: cc.Node = cc.instantiate(this.attackEffectL);
 
 			attackEffectL.parent = this.hero.parent;
 			attackEffectL.x = this.hero.x;
@@ -342,11 +340,10 @@ export class HeroControl extends cc.Component {
 		this.attackButton.scaleY = ConstConfig.HERO_SCALE_NOMAL;
 
 		// 停止攻击动画
-		let heroAnimation: cc.Animation = this.hero.getComponent(cc.Animation);
-
-		heroAnimation.play(ConstConfig.ANIMATION_ATTACK);
+		const heroAnimation: cc.Animation = this.hero.getComponent(cc.Animation);
 
 		// 播放站立动画
+		heroAnimation.play(ConstConfig.ANIMATION_ATTACK);
 		heroAnimation.play(ConstConfig.ANIMATION_STATIC);
 		if (HeroControl.runState) {
 			// 播放运动动画
@@ -375,10 +372,10 @@ export class HeroControl extends cc.Component {
 			heroAnimation.stop(ConstConfig.ANIMATION_RUN);
 			this.speedY = ConstConfig.SPEED_JUMP;
 
-			//  跳跃上升
+			// 跳跃上升
 			const jumpUp: any = cc.jumpTo(1, HeroControl.heroX, this.hero.y, this.speedY, 1);
 
-			//  添加一个回调函数，用于在动作结束时调用我们定义的其他方法
+			// 添加一个回调函数，用于在动作结束时调用我们定义的其他方法
 			const callback: any = cc.callFunc(this.jumpOver, this);
 
 			// 添加动作列表
@@ -399,9 +396,9 @@ export class HeroControl extends cc.Component {
 	 */
 	private jumpOver(): void {
 		if (HeroControl.runState) {
-			// 播放运动动画
-			let heroAnimation: cc.Animation = this.hero.getComponent(cc.Animation);
+			const heroAnimation: cc.Animation = this.hero.getComponent(cc.Animation);
 
+			// 播放运动动画
 			heroAnimation.play(ConstConfig.ANIMATION_RUN);
 		}
 	}
@@ -437,7 +434,7 @@ export class HeroControl extends cc.Component {
 		this.camer.node.x = target.x;
 		this.camer.node.y = 0;
 		if (target.y > this.cameraUpMaxY - 155) {
-			//  target.y = this.cameraUpMaxY - 155;
+			// target.y = this.cameraUpMaxY - 155;
 			this.camer.node.y = target.y - 220;
 		}
 	}
@@ -475,9 +472,9 @@ export class HeroControl extends cc.Component {
 				this.hero.x += 2;
 			}
 			// 播放闪烁动画
-			let action: cc.ActionInterval = cc.blink(1, 5);
-			let callFun: cc.ActionInstant = cc.callFunc(this.displayHero, this);
-			let seq: cc.ActionInterval = cc.sequence(action, callFun);
+			const action: cc.ActionInterval = cc.blink(1, 5);
+			const callFun: cc.ActionInstant = cc.callFunc(this.displayHero, this);
+			const seq: cc.ActionInterval = cc.sequence(action, callFun);
 
 			this.hero.runAction(seq);
 			this.reduceBlood(other.node.name);
@@ -521,7 +518,7 @@ export class HeroControl extends cc.Component {
 		}
 
 		// 血条同步
-		let bloodSprite: cc.Sprite = this.bloodBar.getComponent(cc.Sprite);
+		const bloodSprite: cc.Sprite = this.bloodBar.getComponent(cc.Sprite);
 
 		bloodSprite.fillRange = HeroControl.heroBlood / 100;
 	}
