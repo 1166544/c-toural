@@ -10,13 +10,13 @@ const { ccclass, property } = cc._decorator;
 @ccclass
 export class LoadAndExist extends cc.Component {
 	/**
-	 * 退出按钮.
+	 * 退出按钮
 	 */
 	@property(cc.Node)
 	private exitButton: cc.Node = null;
 
 	/**
-	 * 继续游戏.
+	 * 继续游戏
 	 */
 	@property(cc.Node)
 	private loadButton: cc.Node = null;
@@ -39,7 +39,7 @@ export class LoadAndExist extends cc.Component {
 	}
 
 	/**
-	 * 退出游戏.
+	 * 退出游戏
 	 *
 	 * @example
 	 */
@@ -53,7 +53,7 @@ export class LoadAndExist extends cc.Component {
 	}
 
 	/**
-	 * 按钮取消.
+	 * 按钮取消
 	 *
 	 * @example
 	 */
@@ -64,7 +64,7 @@ export class LoadAndExist extends cc.Component {
 	}
 
 	/**
-	 * 重新游戏.
+	 * 重新游戏
 	 *
 	 * @example
 	 */
@@ -77,7 +77,7 @@ export class LoadAndExist extends cc.Component {
 	}
 
 	/**
-	 * 按钮取消.
+	 * 按钮取消
 	 *
 	 * @example
 	 */

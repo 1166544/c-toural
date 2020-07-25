@@ -12,10 +12,10 @@ const { ccclass, property } = cc._decorator;
 @ccclass
 export class GameOver extends cc.Component {
 	/**
-	 * 碰撞检测.
+	 * 碰撞检测
 	 *
-	 * @param other - 其它.
-	 * @param self - 自已.
+	 * @param other - 其它
+	 * @param self - 自已
 	 * @example
 	 */
 	public onCollisionEnter(other: any, self: any): void {
