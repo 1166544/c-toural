@@ -1,4 +1,4 @@
-import { ConstConfig } from '../config/ConstConfig';
+import { ConstConfig } from '../config/ConfigConst';
 const { ccclass, property } = cc._decorator;
 
 /**

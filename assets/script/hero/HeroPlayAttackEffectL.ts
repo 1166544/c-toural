@@ -1,8 +1,8 @@
-import { ConstConfig } from '../config/ConstConfig';
+import { ConstConfig } from '../config/ConfigConst';
 const { ccclass, property } = cc._decorator;
 
 /**
- * 播放攻击特效
+ * play attack effect r
  *
  * @export
  * @class PlayAttackEffectR
@@ -33,7 +33,7 @@ export class PlayAttackEffectR extends cc.Component {
 	 * @memberof PlayAttackEffectR
 	 */
 	protected update(dt: number): void {
-		this.node.x += this.speed * dt;
+		this.node.x -= this.speed * dt;
 	}
 
 	/**
