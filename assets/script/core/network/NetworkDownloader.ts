@@ -6,21 +6,6 @@
  * @class NetworkDownloader
  */
 export class NetworkDownloader {
-	private static instance: NetworkDownloader;
-	private jsbDownloaderPool: any[];
-	private maxDownloadingCnt: number;
-	private downloadingCnt: number;
-	private downloadQueue: IDownloadItem[]; // 等待下载列表
-	private downloadedMap: Map<string, IDownloadTask>; // 已下载资源列表，url -> DownloadTask
-	private downloadingMap: Map<string, IDownloadItem[]>; // 下载同一个url的item列表
-
-	private constructor() {
-		if (!CC_JSB) {
-			cc.warn('Downloader is a NATIVE ONLY feature.');
-		}
-		this.maxDownloadingCnt = 2;
-		this.downloadingCnt = 0;
-	}
 
 	/**
 	 * 单例
@@ -35,6 +20,21 @@ export class NetworkDownloader {
 		}
 
 		return this.instance;
+	}
+	private static instance: NetworkDownloader;
+	private downloadedMap: Map<string, IDownloadTask>; // 已下载资源列表，url -> DownloadTask
+	private downloadingCnt: number;
+	private downloadingMap: Map<string, IDownloadItem[]>; // 下载同一个url的item列表
+	private downloadQueue: IDownloadItem[]; // 等待下载列表
+	private jsbDownloaderPool: any[];
+	private maxDownloadingCnt: number;
+
+	private constructor() {
+		if (!CC_JSB) {
+			cc.warn('Downloader is a NATIVE ONLY feature.');
+		}
+		this.maxDownloadingCnt = 2;
+		this.downloadingCnt = 0;
 	}
 
 	/**
@@ -77,7 +77,7 @@ export class NetworkDownloader {
 		}
 
 		// 创建下载任务
-		let jsbDownloader: any = this.popJsbDownloader();
+		const jsbDownloader: any = this.popJsbDownloader();
 		jsbDownloader.setOnTaskProgress(this.onTaskProgress.bind(this, requestURL));
 		jsbDownloader.setOnFileTaskSuccess(this.onFileTaskSuccess.bind(this, requestURL, jsbDownloader));
 		jsbDownloader.setOnTaskError(this.onTaskError.bind(this, requestURL, jsbDownloader));
@@ -112,28 +112,6 @@ export class NetworkDownloader {
 		}
 		const item: any = this.downloadQueue.pop();
 		this.downloadFile(item);
-	}
-
-	/**
-	 * on task progress
-	 *
-	 * @private
-	 * @param {string} requestURL
-	 * @param {IDownloadTask} task
-	 * @param {number} bytesReceived
-	 * @param {number} totalBytesReceived
-	 * @param {number} totalBytesExpected
-	 * @memberof NetworkDownloader
-	 */
-	private onTaskProgress(requestURL: string, task: IDownloadTask, bytesReceived: number, totalBytesReceived: number, totalBytesExpected: number): any {
-		if (this.downloadingMap) {
-			const downloadingItems: any = this.downloadingMap.get(requestURL);
-			downloadingItems.forEach((item: any): any => {
-				if (item.onTaskProgress) {
-					item.onTaskProgress(task, bytesReceived, totalBytesReceived, totalBytesExpected);
-				}
-			});
-		}
 	}
 
 	/**
@@ -199,6 +177,28 @@ export class NetworkDownloader {
 	}
 
 	/**
+	 * on task progress
+	 *
+	 * @private
+	 * @param {string} requestURL
+	 * @param {IDownloadTask} task
+	 * @param {number} bytesReceived
+	 * @param {number} totalBytesReceived
+	 * @param {number} totalBytesExpected
+	 * @memberof NetworkDownloader
+	 */
+	private onTaskProgress(requestURL: string, task: IDownloadTask, bytesReceived: number, totalBytesReceived: number, totalBytesExpected: number): any {
+		if (this.downloadingMap) {
+			const downloadingItems: any = this.downloadingMap.get(requestURL);
+			downloadingItems.forEach((item: any): any => {
+				if (item.onTaskProgress) {
+					item.onTaskProgress(task, bytesReceived, totalBytesReceived, totalBytesExpected);
+				}
+			});
+		}
+	}
+
+	/**
 	 * pop jsb downloader
 	 *
 	 * @private
@@ -239,11 +239,11 @@ export class NetworkDownloader {
  * @interface IDownloadItem
  */
 interface IDownloadItem {
+	onFileTaskSuccess?: (task: IDownloadTask) => void;
+	onTaskError?: (task: IDownloadTask, errCode: number, errStr: string) => void;
+	onTaskProgress?: (task: IDownloadTask, bytesReceived: number, totalBytesReceived: number, totalBytesExpected: number) => void;
 	requestURL: string;
 	storagePath: string;
-	onTaskProgress?: (task: IDownloadTask, bytesReceived: number, totalBytesReceived: number, totalBytesExpected: number) => void;
-	onTaskError?: (task: IDownloadTask, errCode: number, errStr: string) => void;
-	onFileTaskSuccess?: (task: IDownloadTask) => void;
 }
 
 /**

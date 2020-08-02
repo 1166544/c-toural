@@ -7,11 +7,6 @@ import { handler } from '../utils/Utils';
  * @class NetworkHttpService
  */
 export class NetworkHttpService {
-	private static instance: NetworkHttpService;
-
-	constructor() {
-		// hole
-	}
 
 	/**
 	 * 单例
@@ -26,6 +21,20 @@ export class NetworkHttpService {
 		}
 
 		return this.instance;
+	}
+
+	constructor() {
+		// hole
+	}
+	private static instance: NetworkHttpService;
+
+	/**
+	 * download
+	 *
+	 * @memberof NetworkHttpService
+	 */
+	public doDownload(): any {
+		// hole
 	}
 
 	/**
@@ -64,15 +73,6 @@ export class NetworkHttpService {
 	}
 
 	/**
-	 * download
-	 *
-	 * @memberof NetworkHttpService
-	 */
-	public doDownload(): any {
-		// hole
-	}
-
-	/**
 	 * do http
 	 *
 	 * @private
@@ -104,6 +104,66 @@ export class NetworkHttpService {
 			params = JSON.stringify(params);
 		}
 		xhr.send(params);
+	}
+
+	/**
+	 * get query string
+	 *
+	 * @private
+	 * @param {*} params
+	 * @returns
+	 * @memberof NetworkHttpService
+	 */
+	private getQueryString(params: any): any {
+		const tmps: string[] = [];
+		for (const key in params) {
+			if (params[key]) {
+				tmps.push(`${key}=${params[key]}`);
+			}
+		}
+
+		return tmps.join('&');
+	}
+
+	/**
+	 * notify callback
+	 *
+	 * @private
+	 * @param {handler} cb
+	 * @param {number} code
+	 * @param {*} [data]
+	 * @memberof NetworkHttpService
+	 */
+	private notifyCallback(cb: handler, code: number, data?: any): any {
+		if (cb) {
+			cb.exec(code, data);
+		}
+	}
+
+	/**
+	 * on abort
+	 *
+	 * @private
+	 * @param {XMLHttpRequest} xhr
+	 * @param {string} url
+	 * @memberof NetworkHttpService
+	 */
+	private onAbort(xhr: XMLHttpRequest, url: string): any {
+		cc.warn(`${url}, request onabort`);
+		this.removeXhrEvent(xhr);
+	}
+
+	/**
+	 * on error
+	 *
+	 * @private
+	 * @param {XMLHttpRequest} xhr
+	 * @param {string} url
+	 * @memberof NetworkHttpService
+	 */
+	private onError(xhr: XMLHttpRequest, url: string): any {
+		cc.warn(`${url}, request onerror`);
+		this.removeXhrEvent(xhr);
 	}
 
 	/**
@@ -149,32 +209,6 @@ export class NetworkHttpService {
 	}
 
 	/**
-	 * on error
-	 *
-	 * @private
-	 * @param {XMLHttpRequest} xhr
-	 * @param {string} url
-	 * @memberof NetworkHttpService
-	 */
-	private onError(xhr: XMLHttpRequest, url: string): any {
-		cc.warn(`${url}, request onerror`);
-		this.removeXhrEvent(xhr);
-	}
-
-	/**
-	 * on abort
-	 *
-	 * @private
-	 * @param {XMLHttpRequest} xhr
-	 * @param {string} url
-	 * @memberof NetworkHttpService
-	 */
-	private onAbort(xhr: XMLHttpRequest, url: string): any {
-		cc.warn(`${url}, request onabort`);
-		this.removeXhrEvent(xhr);
-	}
-
-	/**
 	 * remove xhr event
 	 *
 	 * @private
@@ -189,21 +223,6 @@ export class NetworkHttpService {
 	}
 
 	/**
-	 * notify callback
-	 *
-	 * @private
-	 * @param {handler} cb
-	 * @param {number} code
-	 * @param {*} [data]
-	 * @memberof NetworkHttpService
-	 */
-	private notifyCallback(cb: handler, code: number, data?: any): any {
-		if (cb) {
-			cb.exec(code, data);
-		}
-	}
-
-	/**
 	 * set headers
 	 *
 	 * @private
@@ -212,30 +231,11 @@ export class NetworkHttpService {
 	 * @memberof NetworkHttpService
 	 */
 	private setHttpHeaders(xhr: XMLHttpRequest, headers: any): any {
-		for (let key in headers) {
+		for (const key in headers) {
 			if (headers[key]) {
 				xhr.setRequestHeader(key, headers[key]);
 			}
 		}
-	}
-
-	/**
-	 * get query string
-	 *
-	 * @private
-	 * @param {*} params
-	 * @returns
-	 * @memberof NetworkHttpService
-	 */
-	private getQueryString(params: any): any {
-		const tmps: string[] = [];
-		for (let key in params) {
-			if (params[key]) {
-				tmps.push(`${key}=${params[key]}`);
-			}
-		}
-
-		return tmps.join('&');
 	}
 }
 

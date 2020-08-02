@@ -10,11 +10,6 @@ const { ccclass, property } = cc._decorator;
  */
 @ccclass
 export class Monster1 extends cc.Component {
-	/**
-	 * 怪物1
-	 */
-	@property(cc.Node)
-	private monster1: cc.Node = null;
 
 	/**
 	 * Monster1血量，默认为20
@@ -25,6 +20,37 @@ export class Monster1 extends cc.Component {
 	 * 怪物跳跃次数
 	 */
 	private static runTag: number = 0;
+	/**
+	 * 怪物1
+	 */
+	@property(cc.Node)
+	private monster1: cc.Node = null;
+
+	/**
+	 * 碰撞检测
+	 *
+	 * @param other - Other
+	 * @param self - Self
+	 * @example
+	 */
+	public onCollisionEnter(other: any, self: any): void {
+		// 如果碰撞到了攻击特效
+		if (other.node.group === ConstConfig.ATTACK_GROUP_NAME) {
+			// 播放闪烁动画
+			const action: cc.ActionInterval = cc.blink(1, 5);
+			const callFun: cc.ActionInstant = cc.callFunc(this.displayHero, this);
+			const seq: cc.ActionInterval = cc.sequence(action, callFun);
+
+			// 血量减少
+			this.monster1.runAction(seq);
+			Monster1.monster1Blood -= ConstConfig.HERO_ATTACK;
+
+			// 判断血量
+			if (Monster1.monster1Blood <= 0) {
+				this.monster1.destroy();
+			}
+		}
+	}
 
 	/**
 	 * onload
@@ -62,6 +88,16 @@ export class Monster1 extends cc.Component {
 	}
 
 	/**
+	 * 显示人物
+	 *
+	 * @example
+	 */
+	private displayHero(): void {
+		this.monster1.opacity = 255;
+		this.monster1.active = true;
+	}
+
+	/**
 	 * 蛤蟆怪1自动跳跃函数
 	 *
 	 * @example
@@ -96,41 +132,5 @@ export class Monster1 extends cc.Component {
 			this.monster1.runAction(seq);
 			Monster1.runTag++;
 		}
-	}
-
-	/**
-	 * 碰撞检测
-	 *
-	 * @param other - Other
-	 * @param self - Self
-	 * @example
-	 */
-	public onCollisionEnter(other: any, self: any): void {
-		// 如果碰撞到了攻击特效
-		if (other.node.group === ConstConfig.ATTACK_GROUP_NAME) {
-			// 播放闪烁动画
-			const action: cc.ActionInterval = cc.blink(1, 5);
-			const callFun: cc.ActionInstant = cc.callFunc(this.displayHero, this);
-			const seq: cc.ActionInterval = cc.sequence(action, callFun);
-
-			// 血量减少
-			this.monster1.runAction(seq);
-			Monster1.monster1Blood -= ConstConfig.HERO_ATTACK;
-
-			// 判断血量
-			if (Monster1.monster1Blood <= 0) {
-				this.monster1.destroy();
-			}
-		}
-	}
-
-	/**
-	 * 显示人物
-	 *
-	 * @example
-	 */
-	private displayHero(): void {
-		this.monster1.opacity = 255;
-		this.monster1.active = true;
 	}
 }

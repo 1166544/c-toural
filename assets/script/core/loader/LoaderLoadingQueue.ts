@@ -8,12 +8,6 @@ import { LoaderManager } from './LoaderManager';
  * @class LoaderLoadingQueue
  */
 export class LoaderLoadingQueue {
-	private static instance: LoaderLoadingQueue;
-	private loadingMap: Map<string, handler[]>;
-
-	constructor() {
-		this.loadingMap = new Map();
-	}
 
 	/**
 	 * 单例
@@ -28,6 +22,21 @@ export class LoaderLoadingQueue {
 		}
 
 		return this.instance;
+	}
+
+	constructor() {
+		this.loadingMap = new Map();
+	}
+	private static instance: LoaderLoadingQueue;
+	private loadingMap: Map<string, handler[]>;
+
+	/**
+	 * 清除
+	 *
+	 * @memberof LoaderLoadingQueue
+	 */
+	public clear(): void {
+		this.loadingMap.clear();
 	}
 
 	/**
@@ -59,14 +68,5 @@ export class LoaderLoadingQueue {
 				}
 			})
 		);
-	}
-
-	/**
-	 * 清除
-	 *
-	 * @memberof LoaderLoadingQueue
-	 */
-	public clear(): void {
-		this.loadingMap.clear();
 	}
 }

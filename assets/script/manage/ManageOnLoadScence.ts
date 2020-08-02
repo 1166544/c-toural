@@ -9,17 +9,6 @@ const { ccclass, property } = cc._decorator;
  */
 @ccclass
 export class OnLoadScence extends cc.Component {
-	/**
-	 * 开始游戏按钮
-	 */
-	@property(cc.Node)
-	private startButton: cc.Node = null;
-
-	/**
-	 * 进度条填充
-	 */
-	@property(cc.Sprite)
-	private processUi: cc.Sprite = null;
 
 	/**
 	 * process bar
@@ -30,6 +19,17 @@ export class OnLoadScence extends cc.Component {
 	 */
 	@property(cc.Node)
 	private processBar: cc.Node = null;
+
+	/**
+	 * 进度条填充
+	 */
+	@property(cc.Sprite)
+	private processUi: cc.Sprite = null;
+	/**
+	 * 开始游戏按钮
+	 */
+	@property(cc.Node)
+	private startButton: cc.Node = null;
 
 	/**
 	 * 加载

@@ -45,7 +45,7 @@ export class EnablePhy extends cc.Component {
 
 		// 开启碰撞检测系统
 		// 获取碰撞检测类
-		let manager: cc.CollisionManager = cc.director.getCollisionManager();
+		const manager: cc.CollisionManager = cc.director.getCollisionManager();
 
 		// 开启碰撞检测
 		manager.enabled = true;

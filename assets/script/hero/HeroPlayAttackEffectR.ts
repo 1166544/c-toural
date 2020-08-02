@@ -16,6 +16,18 @@ export class PlayAttackEffectR extends cc.Component {
 	private speed: number = ConstConfig.ATTACKEFFECT_SPEED;
 
 	/**
+	 * on collision enter
+	 *
+	 * @param {*} other
+	 * @param {*} self
+	 * @memberof PlayAttackEffectR
+	 */
+	public onCollisionEnter(other: any, self: any): void {
+		this.node.destroy();
+		cc.log('清除技能');
+	}
+
+	/**
 	 * onload
 	 *
 	 * @protected
@@ -34,17 +46,5 @@ export class PlayAttackEffectR extends cc.Component {
 	 */
 	protected update(dt: number): void {
 		this.node.x += this.speed * dt;
-	}
-
-	/**
-	 * on collision enter
-	 *
-	 * @param {*} other
-	 * @param {*} self
-	 * @memberof PlayAttackEffectR
-	 */
-	public onCollisionEnter(other: any, self: any): void {
-		this.node.destroy();
-		cc.log('清除技能');
 	}
 }
