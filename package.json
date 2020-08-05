@@ -13,11 +13,7 @@
 		}
 	},
 	"lint-staged": {
-		"*.{js,jsx,ts,tsx}": [
-			"tslint --fix -p tsconfig.json -c tslint.json",
-			"pretty-quick --staged",
-			"git add"
-		]
+		"*.{js,jsx,ts,tsx}": ["tslint --fix -p tsconfig.json -c tslint.json", "pretty-quick --staged", "git add"]
 	},
 	"repository": {
 		"type": "git",
