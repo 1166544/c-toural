@@ -53,8 +53,21 @@ export class Test {
 	private process(): void {
 		// delegate event
 		// this.delegate();
-		console.log(this.flatArray());
-		console.log(this.unique());
+		// console.log(this.flatArray());
+		// console.log(this.unique());
+		console.log(this.trimStr());
+	}
+
+	/**
+	 * trim
+	 *
+	 * @private
+	 * @param {string} [str=' ad  ds ']
+	 * @returns {string}
+	 * @memberof Test
+	 */
+	private trimStr(str: string = ' xxaddsxx '): string {
+		return str.replace(/(^s+)|(s+$)/gi, '');
 	}
 
 	/**
@@ -68,6 +81,7 @@ export class Test {
 	private unique(arr: Array<any> = [1, 1, 23, 3, 4, 5, 54, 5, 3, 323, 5, 33, 2, 2, 2, 2, 4]): any {
 		const appeared: any = new Set();
 
+		// filter()方法创建一个新的数组，新数组中元素通过检查指定数组中符合什么样件的所有元素组成
 		return arr.filter((item: any): any => {
 			const id: any = item + JSON.stringify(item);
 
