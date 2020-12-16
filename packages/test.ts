@@ -45,6 +45,37 @@ export class Test {
 	}
 
 	/**
+	 * get most
+	 *
+	 * @private
+	 * @param {Array<number>} [arr=[111, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 55, 5, 66, 6, 6, 6, 3, 4, 5, 8, 9, 0, 345, 3]]
+	 * @returns {*}
+	 * @memberof Test
+	 */
+	private getMost(arr: Array<number> = [111, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 55, 5, 66, 6, 6, 6, 3, 4, 5, 8, 9, 0, 345, 3]): any {
+		const map: Map<string, any> = new Map();
+		arr.forEach((item: any): any => {
+			if (map.has(item)) {
+				map.set(item, map.get(item) + 1);
+			} else {
+				map.set(item, 1);
+			}
+		});
+
+		let [maxVals, maxNum]: Array<any> = [[arr[0]], map.get(arr[0].toString())];
+		map.forEach((count: any, item: any): any => {
+			if (count > maxNum) {
+				maxVals = [item];
+				maxNum = count;
+			} else {
+				maxVals.push(item);
+			}
+		});
+
+		return maxVals;
+	}
+
+	/**
 	 * process
 	 *
 	 * @private
@@ -55,7 +86,33 @@ export class Test {
 		// this.delegate();
 		// console.log(this.flatArray());
 		// console.log(this.unique());
-		console.log(this.trimStr());
+		// console.log(this.trimStr());
+		// console.log(this.startcombine());
+		console.log(this.getMost());
+	}
+
+	/**
+	 * combine
+	 *
+	 * @private
+	 * @param {string} [str='abdd3fsfjlkfjfkjsl4jfd']
+	 * @returns {string}
+	 * @memberof Test
+	 */
+	private startcombine(str: string = 'abdd3fsfjlkfjfkjsl4jfd'): any {
+		if (str.length === 1) {
+			return [str];
+		}
+
+		const result: Array<any> = [];
+		// tslint:disable-next-line:forin
+		for (let i: number = 0; i < str.length; i++) {
+			for (const s of this.startcombine(str.slice(0, i) + str.slice(1 + +i))) {
+				result.push(str[i] + s);
+			}
+		}
+
+		return [...new Set(result)];
 	}
 
 	/**
