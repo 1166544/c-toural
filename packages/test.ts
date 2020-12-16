@@ -54,6 +54,31 @@ export class Test {
 		// delegate event
 		// this.delegate();
 		console.log(this.flatArray());
+		console.log(this.unique());
+	}
+
+	/**
+	 * for unique
+	 *
+	 * @private
+	 * @param {Array} [arr=[]]
+	 * @returns {*}
+	 * @memberof Test
+	 */
+	private unique(arr: Array<any> = [1, 1, 23, 3, 4, 5, 54, 5, 3, 323, 5, 33, 2, 2, 2, 2, 4]): any {
+		const appeared: any = new Set();
+
+		return arr.filter((item: any): any => {
+			const id: any = item + JSON.stringify(item);
+
+			if (appeared.has(id)) {
+				return false;
+			} else {
+				appeared.add(id);
+
+				return true;
+			}
+		});
 	}
 }
 

@@ -20,5 +20,5 @@
 		"forceConsistentCasingInFileNames": true
 	},
 	"include": ["**/*.ts"],
-	"exclude": ["node_modules", ".vscode", "library", "local", "settings", "temp"]
+	"exclude": ["node_modules", ".vscode", "library", "local", "settings", "temp", "packages"]
 }
