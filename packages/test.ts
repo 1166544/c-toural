@@ -29,6 +29,7 @@ export class Test {
 	 * @private
 	 * @memberof Test
 	 */
+
 	private flatArray(arr: Array<any> = [1, 3, 4, [32, 32, 2, 1, 'ddss']]): void {
 		let result: any = [];
 		for (let index: number = 0; index < arr.length; index++) {
