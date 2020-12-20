@@ -46,6 +46,17 @@ export class Test {
 	}
 
 	/**
+	 * mobile view port
+	 *
+	 * @private
+	 * @returns {string}
+	 * @memberof Test
+	 */
+	private getDeviceWidthContent(): string {
+		return '<meta name="viewport" content="width=device=width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scaable=no"';
+	}
+
+	/**
 	 * get most
 	 *
 	 * @private
