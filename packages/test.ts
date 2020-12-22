@@ -21,6 +21,27 @@ export class Test {
 		// 	const target: any = newEvent.target || newEvent.scrElement;
 		// 	console.log(target, newEvent);
 		// };
+
+		// 合并对象
+		const a: Set<any> = new Set([1, 2, 3]);
+		const b: Set<any> = new Set([4, 5, 6, 7]);
+		const union: Set<any> = new Set([...a, ...b]);
+
+		// 交集
+		const intersect: Set<any> = new Set(
+			[...a].filter((x: number): any => {
+				return b.has(x);
+			})
+		);
+
+		// 差集
+		const difference: Set<any> = new Set(
+			[...a].filter((x: number): any => {
+				return !b.has(x);
+			})
+		);
+
+		console.log(union, intersect, difference);
 	}
 
 	/**
