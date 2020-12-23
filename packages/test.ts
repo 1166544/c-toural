@@ -125,6 +125,21 @@ export class Test {
 	}
 
 	/**
+	 * remove same fields
+	 *
+	 * @private
+	 * @param {Array<number>} [arr=[1,2,3,2,3,2,3,4,3,4,3,4,3]]
+	 * @returns {Array<number>}
+	 * @memberof Test
+	 */
+	private removeSameFields(arr: Array<number> = [1, 2, 3, 2, 3, 2, 3, 4, 3, 4, 3, 4, 3]): Array<number> {
+		const uniqueEntries: Array<number> = [...new Set(arr)];
+		console.log(uniqueEntries);
+
+		return uniqueEntries;
+	}
+
+	/**
 	 * combine
 	 *
 	 * @private
