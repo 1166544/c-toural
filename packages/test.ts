@@ -125,6 +125,20 @@ export class Test {
 	}
 
 	/**
+	 * random sort
+	 *
+	 * @private
+	 * @param {Array<number>} [arr=[1,2,3,4,5,6,7,8,9]]
+	 * @returns {Array<number>}
+	 * @memberof Test
+	 */
+	private randomSort(arr: Array<number> = [1, 2, 3, 4, 5, 6, 7, 8, 9]): Array<number> {
+		return arr.sort((a: number, b: number): any => {
+			return Math.random() - 0.5;
+		});
+	}
+
+	/**
 	 * remove same fields
 	 *
 	 * @private

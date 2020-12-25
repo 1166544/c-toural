@@ -2,7 +2,7 @@
 	"defaultSeverity": "error",
 	"extends": ["tslint-config-alloy"],
 	"linterOptions": {
-		"exclude": ["node_modules", ".vscode", "library", "local", "settings", "temp", "packages"]
+		"exclude": ["node_modules", ".vscode", "library", "local", "settings", "temp", "packages", "react", "first-app"]
 	},
 	"jsRules": {
 		"no-unused-expression": true
