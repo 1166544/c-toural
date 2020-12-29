@@ -17,7 +17,7 @@ export class TestAlgorithm {
 			return (): any => {
 				self.call(ctx, ...arguments);
 			};
-		};
+		}; 
 
 		/**
 		 * a
