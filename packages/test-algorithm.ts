@@ -6,6 +6,44 @@
  */
 export class TestAlgorithm {
 	/**
+	 * deep clonse
+	 *
+	 * @param {*} obj
+	 * @returns {*}
+	 * @memberof TestAlgorithm
+	 */
+	public deepClone(obj: any): any {
+		// null
+		if (obj === null) {
+			return obj;
+		}
+
+		// date
+		if (obj instanceof Date) {
+			return new Date(obj);
+		}
+
+		// reg
+		if (obj instanceof RegExp) {
+			return new RegExp(obj);
+		}
+
+		// basic data
+		if (typeof obj !== 'object') {
+			return obj;
+		}
+
+		const cloneObj: any = new obj.constructor();
+		for (const key in obj) {
+			if (obj.hasOwnProperty(key)) {
+				cloneObj[key] = this.deepClone(obj[key]);
+			}
+		}
+
+		return cloneObj;
+	}
+
+	/**
 	 * green
 	 *
 	 * @memberof TestAlgorithm
