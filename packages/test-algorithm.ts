@@ -13,29 +13,31 @@ export class TestAlgorithm {
 	 * @memberof TestAlgorithm
 	 */
 	public deepClone(obj: any): any {
-		// null
+		// exclude null 如果是null或者undefined就不进行拷贝操作
 		if (obj === null) {
 			return obj;
 		}
 
-		// date
+		// exclude date
 		if (obj instanceof Date) {
 			return new Date(obj);
 		}
 
-		// reg
+		// exclude reg
 		if (obj instanceof RegExp) {
 			return new RegExp(obj);
 		}
 
-		// basic data
+		// basic data 可能是对象或者普通的值  如果是函数的话是不需要深拷贝
 		if (typeof obj !== 'object') {
 			return obj;
 		}
 
+		// create obj by constructor 找到的是所属类原型上的constructor,而原型上的 constructor指向的是当前类本身
 		const cloneObj: any = new obj.constructor();
 		for (const key in obj) {
 			if (obj.hasOwnProperty(key)) {
+				// 实现一个递归拷贝
 				cloneObj[key] = this.deepClone(obj[key]);
 			}
 		}
