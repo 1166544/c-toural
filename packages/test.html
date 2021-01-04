@@ -10,10 +10,32 @@
             height: 200px;
             width: 100px;
         }
+        .rotate-animate {
+            border: 5px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 5px solid #2842d8;
+            width: 30px;
+            height: 30px;
+            animation: rotate 3s linear infinite;
+        }
+        .rotate-animate .fill-color {
+            margin-left: 20px;
+            border-color: #2842d8 #d1b516 #cf4928 #27c965;
+        }
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
     </style>
 </head>
 
 <body>
+    <div class="rotate-animate"></div>
+    <!-- <div class="rotate-animate fill-color"></div> -->
     <img src="" class="image-item" lazyload="true" data-original="https://box.bdimg.com/static/fisp_static/common/img/searchbox/logo_news_276_88_1f9876a.png">
     <img src="" class="image-item" lazyload="true" data-original="https://box.bdimg.com/static/fisp_static/common/img/searchbox/logo_news_276_88_1f9876a.png">
     <img src="" class="image-item" lazyload="true" data-original="https://box.bdimg.com/static/fisp_static/common/img/searchbox/logo_news_276_88_1f9876a.png">
