@@ -1,0 +1,48 @@
+{
+	"name": "vue-h5-ts",
+	"version": "1.0.0",
+	"scripts": {
+		"client": "npm run serve",
+		"serve": "vue-cli-service serve",
+		"dev": "npm run serve",
+		"build": "npm run env && vue-cli-service build",
+		"lint": "npm run format && vue-cli-service lint",
+		"fix": "tslint --fix \"src/**/*.ts\"",
+		"format": "prettier --config .prettierrc --write \"src/**/*.{js,vue,ts,tsx,json,css,scss,md}\" && npm run fix"
+	},
+	"dependencies": {
+		"@types/vue-i18n": "7.0.0",
+		"amfe-flexible": "2.2.1",
+		"axios": "0.21.1",
+		"core-js": "3.6.5",
+		"cross-env": "7.0.3",
+		"postcss-px2rem": "0.3.0",
+		"tslint-config-alloy": "0.2.1",
+		"vue": "2.6.11",
+		"vue-class-component": "7.2.3",
+		"vue-i18n": "8.22.4",
+		"vue-property-decorator": "9.1.2",
+		"vue-router": "3.2.0",
+		"vuex": "3.4.0",
+		"xss": "1.0.8"
+	},
+	"devDependencies": {
+		"@types/mockjs": "1.0.3",
+		"@vue/cli-plugin-babel": "4.5.0",
+		"@vue/cli-plugin-router": "4.5.0",
+		"@vue/cli-plugin-typescript": "4.5.0",
+		"@vue/cli-plugin-vuex": "4.5.0",
+		"@vue/cli-service": "4.5.0",
+		"less": "3.0.4",
+		"less-loader": "5.0.0",
+		"mockjs": "1.1.0",
+		"typescript": "3.9.3",
+		"vue-template-compiler": "2.6.11"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": ["npm run lint"],
+			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+		}
+	}
+}
