@@ -1,0 +1,44 @@
+{
+  "name": "c-toural",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "tslint --fix -p tsconfig.json -c tslint.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "tslint --fix -p tsconfig.json -c tslint.json",
+      "pretty-quick --staged",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1166544/c-toural.git"
+  },
+  "author": "James Liauw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1166544/c-toural/issues"
+  },
+  "homepage": "https://github.com/1166544/c-toural#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": "^12.14.0"
+  }
+}
