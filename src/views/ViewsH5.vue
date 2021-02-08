@@ -30,7 +30,13 @@
 					</div>
 				</div>
 			</div>
-			<div class="cards-views-h5-edward"></div>
+			<div class="cards-views-h5-edward">
+				<h3>CLIENT:</h3>
+				<h4>Edward Brown</h4>
+				<div class="cards-views-h5-edward-img">
+					<img src="@/assets/slices9@2x.png" />
+				</div>
+			</div>
 			<div class="cards-views-h5-road"></div>
 			<div class="cards-views-h5-brand"></div>
 		</div>
