@@ -24,8 +24,9 @@
 
 <script lang="ts">
 import { Component, Emit, Prop, Ref, Vue, Watch } from 'vue-property-decorator';
+import '@/views/ViewsH5.less';
 
-/** 申请表校验单元 */
+/** css layout */
 @Component({
 	components: {}
 })
@@ -38,7 +39,3 @@ export default class ViewsApplyForm extends Vue {
 	}
 }
 </script>
-
-<style scoped>
-@import url('./ViewsH5.less');
-</style>

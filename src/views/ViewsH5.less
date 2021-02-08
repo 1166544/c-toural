@@ -1,64 +1,77 @@
+// vars
+@bg-color: #F1F4FB;
+@btn-color: #2C50EE;
+@border-bottom-color: #f4f5fa;
+@border-color: #ECEDF1;
+@font-color: #fff;
+
 /** top-nav */
 .cars-navbar {
 	display: flex;
 	align-items: center;
 	padding: 40px 30px 0 30px;
-}
-.cars-nav-container {
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-	flex: 1;
-}
-.cars-nav-container> p {
-	display: inline-block;
-	width: 70px;
-	height: 60px;
-	background-color: #F1F4FB;
-	border-radius: 10px;
-	line-height: 75px;
-	text-align: center;
-	vertical-align: middle;
-	margin-right: 20px;
-}
-.cars-nav-container> p img {
-	width: 50px;
-	height: 50px;
-}
-.cars-plus-btn {
-	width: 90px;
-	height: 65px;
-	text-align: center;
-	line-height: 60px;
-	background-color: #2C50EE;
-	border-radius: 10px;
-	color: #fff;
-	font-weight: 50;
-	font-size: 48px;
+	
+	.cars-nav-container {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		flex: 1;
+
+		p {
+			display: inline-block;
+			width: 70px;
+			height: 60px;
+			background-color: @bg-color;
+			border-radius: 10px;
+			line-height: 75px;
+			text-align: center;
+			vertical-align: middle;
+			margin-right: 20px;
+
+			img {
+				width: 50px;
+				height: 50px;
+			}
+		}
+	}
+
+	.cars-plus-btn {
+		width: 90px;
+		height: 65px;
+		text-align: center;
+		line-height: 60px;
+		background-color: @btn-color;
+		border-radius: 10px;
+		color: @font-color;
+		font-weight: 50;
+		font-size: 48px;
+	}
 }
 
 /** search-container */
 .cars-seearch-container {
 	padding: 0 30px 20px 30px;
 	margin-top: 30px;
-	border-bottom: solid 1px #f4f5fa;
-}
-.cars-seearch-container form {
-	display: flex;
-	align-items: center;
-	border: solid 1px #ECEDF1;
-	border-radius: 10px;
-	padding-left: 20px;
-}
-.cars-seearch {
-	width: 100%;
-	height: 70px;
-	padding: 0 10px;
-}
+	border-bottom: solid 1px @border-bottom-color;
 
-.cars-search-button {
-	width: 48px;
-	height: 34px;
+	form {
+		display: flex;
+		align-items: center;
+		border: solid 1px @border-color;
+		border-radius: 10px;
+		padding-left: 20px;
+
+		.cars-seearch {
+			width: 100%;
+			height: 70px;
+			padding: 0 10px;
+		}
+
+		.cars-search-button {
+			width: 48px;
+			height: 34px;
+		}
+	}
 }
 
 /** ad */
