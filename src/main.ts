@@ -4,11 +4,8 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 
-import { ConfigDev } from './config/ConfigDev';
-import { ConfigTest } from './config/ConfigTest';
-import { ConfigHuidu } from './config/ConfigHuidu';
-import { ConfigProd } from './config/ConfigProd';
-import ConfigEnv from './config/ConfigEnv';
+import '@/styles/StyleCommon.less';
+import '@/styles/StyleReset.less';
 
 Vue.config.productionTip = false;
 

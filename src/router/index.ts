@@ -15,16 +15,7 @@ const routes: RouteConfig[] = [
 	{
 		path: '/h5',
 		name: 'H5Index',
-		// route level code-splitting
-		// this generates a separate chunk (H5Index.[hash].js) for this route
-		// which is lazy-loaded when the route is visited.
-		redirect: (to: Route): any => {
-			const { hash, params, query }: Route = to;
-			const flowCode: any = query.flowCode;
-
-			return params && params.token ? `/${flowCode}&token=${query.tokem}` : `/${flowCode}`;
-		}
-		// component: (): any => import(/* webpackChunkName: "H5Index" */ '../views/ViewsH5.vue')
+		component: (): any => import(/* webpackChunkName: "H5Index" */ '../views/ViewsH5.vue')
 	}
 ];
 
