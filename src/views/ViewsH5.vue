@@ -9,6 +9,7 @@
 				<div class="cars-views-h5-plus-btn">+</div>
 			</div>
 		</div>
+
 		<!-- search container -->
 		<div class="cars-views-h5-seearch-container">
 			<form>
@@ -16,7 +17,24 @@
 				<input class="cars-views-h5-seearch" type="text" name="search" placeholder="Search Orders" />
 			</form>
 		</div>
-		<!-- <div class="cars-views-h5-ad">广告层</div> -->
+
+		<!-- AD -->
+		<div class="cars-views-h5-ad">
+			<div class="cards-views-h5-mercedes">
+				<img src="@/assets/slices10@2x.png" />
+				<h3>Meredes-Maybach S8900</h3>
+				<div class="cards-views-h5-chat">
+					<div class="cards-views-h5-chat-btn">
+						<img src="@/assets/slices7@2x.png" />
+						12
+					</div>
+				</div>
+			</div>
+			<div class="cards-views-h5-edward"></div>
+			<div class="cards-views-h5-road"></div>
+			<div class="cards-views-h5-brand"></div>
+		</div>
+
 		<!-- <div class="cars-views-h5-product-list">产品列表</div> -->
 		<!-- <div class="cars-views-h5-chat-box">对话层</div> -->
 	</div>

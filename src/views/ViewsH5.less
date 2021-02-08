@@ -4,6 +4,8 @@
 @border-bottom-color: #f4f5fa;
 @border-color: #ECEDF1;
 @font-color: #fff;
+@border-radius: 10px;
+@title-color: #9DA6B7;
 
 /** top-nav */
 .cars-views-h5-navbar {
@@ -22,7 +24,7 @@
 			width: 70px;
 			height: 60px;
 			background-color: @bg-color;
-			border-radius: 10px;
+			border-radius: @border-radius;
 			line-height: 75px;
 			text-align: center;
 			vertical-align: middle;
@@ -75,3 +77,41 @@
 }
 
 /** ad */
+.cars-views-h5-ad {
+	padding: 0 30px 0 0;
+
+	.cards-views-h5-mercedes {
+		display: flex;
+		align-items: center;
+		padding: 20px 0 0 30px;
+		
+		img {
+			width: 141px;
+			height: 74px;
+		}
+
+		h3 {
+			margin-left: 20px;
+			color: @title-color;
+		}
+
+		.cards-views-h5-chat {
+			display: flex;
+			justify-content: flex-end;
+			flex: 1;
+			align-items: center;
+
+			.cards-views-h5-chat-btn {
+				color: @border-color;
+				border: solid 1px @border-color;
+				border-radius: 30px;
+				font-size: 10px;
+				padding: 6px 12px 5px 12px;
+				img {
+					width: 27px;
+					height: 24px;
+				}
+			}
+		}
+	}
+}
