@@ -68,7 +68,56 @@
 			</div>
 		</div>
 
-		<!-- <div class="cars-views-h5-product-list">产品列表</div> -->
+		<!-- product list -->
+		<div class="cars-views-h5-product-list">
+			<div class="cars-views-h5-product-list-title">
+				<div class="cars-views-h5-product-list-left-title">
+					<h1>BEING PROCESSED</h1>
+					<h3>June 28, 2021 10:14 PM</h3>
+				</div>
+				<div class="cars-views-h5-product-list-right-title">
+					ORDER IS ACCEPTED
+				</div>
+			</div>
+			<!-- url list -->
+			<ul class="cars-views-h5-product-list-ul">
+				<li>
+					<div class="cars-views-h5-product-list-item">
+						<!-- top -->
+						<div class="cars-views-h5-product-list-item-top">
+							<img src="@/assets/slices4@2x.png" />
+							<div class="cars-views-h5-product-list-item-right">
+								<h1>VEHICLE</h1>
+								<h2>Mercedes-Benz</h2>
+								<h3>A250 AMG</h3>
+							</div>
+						</div>
+						<!-- bottom -->
+						<div class="cars-views-h5-product-list-item-bottom">
+							<!-- left -->
+							<div class="cars-views-h5-product-list-item-bottom-left">
+								<h1>DRIVER</h1>
+								<h2>Vincent Stevenson</h2>
+							</div>
+							<!-- center -->
+							<div class="cars-views-h5-product-list-item-bottom-center">
+								<h1>PRICE</h1>
+								<h2>$999</h2>
+							</div>
+							<!-- right -->
+							<div class="cars-views-h5-product-list-item-bottom-right">
+								<div class="cars-views-h5-product-list-item-bottom-right-chat">
+									<img src="@/assets/slices3@2x.png" />
+								</div>
+								<div class="cars-views-h5-product-list-item-bottom-right-plus">
+									+
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
 		<!-- <div class="cars-views-h5-chat-box">对话层</div> -->
 	</div>
 </template>
