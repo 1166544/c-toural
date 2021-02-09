@@ -37,8 +37,35 @@
 					<img src="@/assets/slices9@2x.png" />
 				</div>
 			</div>
-			<div class="cards-views-h5-road"></div>
-			<div class="cards-views-h5-brand"></div>
+			<div class="cards-views-h5-road">
+				<p>ON THE ROAD</p>
+				<h3>10:28 a.m.</h3>
+			</div>
+			<div class="cards-views-h5-brand">
+				<div class="cards-views-h5-brand-top">
+					<img src="@/assets/slices6@2x.png" />
+					<h3>Mercedes-Bens, Ford</h3>
+					<div class="cards-views-h5-brand-top-container">
+						<div class="cards-views-h5-brand-top-btn">
+							<img src="@/assets/slices5@2x.png" />
+							3
+						</div>
+					</div>
+				</div>
+				<div class="cards-views-h5-brand-middle">
+					<div class="cards-views-h5-brand-break">
+						<h1>IENT:</h1>
+						<h3>Daniel Harrison</h3>
+					</div>
+					<div class="cards-views-h5-brand-middle-btn">
+						<img src="@/assets/slices9@2x.png" />
+					</div>
+				</div>
+				<div class="cards-views-h5-brand-bottom">
+					<p>VER SELECTION</p>
+					<h3>10:23 a.m.</h3>
+				</div>
+			</div>
 		</div>
 
 		<!-- <div class="cars-views-h5-product-list">产品列表</div> -->
