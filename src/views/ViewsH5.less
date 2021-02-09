@@ -265,7 +265,7 @@
 // product list
 .cars-views-h5-product-list {
 	background: #dfe0e5;
-	padding: 65px 35px 45px 32px;
+	padding: 65px 35px 5px 32px;
 	
 	// title
 	.cars-views-h5-product-list-title {
@@ -378,4 +378,115 @@
 // chat box
 .cars-views-h5-chat-box {
 	background: #dfe0e5;
+	padding: 0 35px;
+
+	.cars-views-h5-chat-box-container {
+		background: #fff;
+		border-radius: @border-radius;
+		padding: 35px;
+
+		.cars-views-h5-chat-box-top {
+			font-size: 39px;
+		}
+
+		.cars-views-h5-chat-box-list {
+			padding-top: 50px;
+
+			.cars-views-h5-chat-box-list-left {
+				display: flex;
+				align-items: flex-start;
+				img {
+					width: 58px;
+					height: 58px;
+					border: solid 1px #dedede;
+					border-radius: 50px;
+				}
+
+				.cars-views-h5-chat-box-list-chatbox {
+					margin-left: 30px;
+					background-color: @btn-color;
+					padding: 25px 30px 25px 30px;
+					border-radius: 0 35px 35px 35px;
+					box-shadow: 3px 3px 20px @title-color;
+
+					.cars-views-h5-chat-box-list-chatbox-title {
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+
+						h1 {
+							font-size: 30px;
+							color: white;
+							font-weight: normal;
+						}
+						h2 {
+							font-size: 10px;
+							color: #4A69F5;
+							font-weight: normal;
+						}
+					}
+
+					p {
+						font-size: 10px;
+						padding-top: 20px;
+						color: #A0B3F7;
+						line-height: 40px;
+					}
+				}
+			}
+
+			.cars-views-h5-chat-box-list-right {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				margin-top: 50px;
+				.cars-views-h5-chat-box-list-right-chatbox {
+					background-color: #DDE0F1;
+					max-width: 400px;
+					padding: 20px 40px 20px 40px;
+					border-radius: 40px 40px 0 40px;
+					.cars-views-h5-chat-box-list-right-chatbox-item {
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+
+						h1 {
+							font-size: 30px;
+							color: #161A25;
+						}
+						h2 {
+							font-size: 10px;
+							font-weight: normal;
+							color: @title-color;
+						}
+					}
+
+					p {
+						font-size: 12px;
+						padding-top: 20px;
+						line-height: 40px;
+						color: #858C96;
+					}
+				}
+			}
+		}
+
+		.cars-views-h5-chat-box-bottom {
+			border-top: #ECEDEF solid 1px;
+			margin-top: 120px;
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+			width: 100%;
+
+			input {
+				margin-top: 25px;
+			}
+			img {
+				width: 57px;
+				height: 49px;
+				margin-top: 20px;
+			}
+		}
+	}
 }

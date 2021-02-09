@@ -152,7 +152,41 @@
 				</li>
 			</ul>
 		</div>
-		<!-- <div class="cars-views-h5-chat-box">对话层</div> -->
+
+		<!-- chat box -->
+		<div class="cars-views-h5-chat-box">
+			<div class="cars-views-h5-chat-box-container">
+				<div class="cars-views-h5-chat-box-top">Live Chat</div>
+				<ul class="cars-views-h5-chat-box-list">
+					<li>
+						<div class="cars-views-h5-chat-box-list-left">
+							<img src="@/assets/slices8@2x.png" />
+							<div class="cars-views-h5-chat-box-list-chatbox">
+								<div class="cars-views-h5-chat-box-list-chatbox-title">
+									<h1>Daniel Harrison</h1>
+									<h2>10 min ago</h2>
+								</div>
+								<p>You make really great work!!!Check out my portfolio, I'll be glad for any feedback!</p>
+							</div>
+						</div>
+						<div class="cars-views-h5-chat-box-list-right">
+							<p></p>
+							<div class="cars-views-h5-chat-box-list-right-chatbox">
+								<div class="cars-views-h5-chat-box-list-right-chatbox-item">
+									<h1>You</h1>
+									<h2>Just Now</h2>
+								</div>
+								<p>Hello!What do you mean?</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<form class="cars-views-h5-chat-box-bottom">
+					<input class="cars-views-h5-chat-box-bottom-seearch" type="text" name="search" placeholder="Type a message" />
+					<img class="cars-views-h5-chat-box-bottom-search-button" src="@/assets/slices1@2x.png" />
+				</form>
+			</div>
+		</div>
 	</div>
 </template>
 
