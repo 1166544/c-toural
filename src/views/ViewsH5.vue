@@ -115,6 +115,40 @@
 							</div>
 						</div>
 					</div>
+
+					<div class="cars-views-h5-product-list-item">
+						<!-- top -->
+						<div class="cars-views-h5-product-list-item-top">
+							<img src="@/assets/slices2@2x.png" />
+							<div class="cars-views-h5-product-list-item-right">
+								<h1>VEHICLE</h1>
+								<h2>Ford Mustang</h2>
+								<h3>GT-Fastback</h3>
+							</div>
+						</div>
+						<!-- bottom -->
+						<div class="cars-views-h5-product-list-item-bottom">
+							<!-- left -->
+							<div class="cars-views-h5-product-list-item-bottom-left">
+								<h1>DRIVER</h1>
+								<h2>Peter Lambert</h2>
+							</div>
+							<!-- center -->
+							<div class="cars-views-h5-product-list-item-bottom-center">
+								<h1>PRICE</h1>
+								<h2>$1399</h2>
+							</div>
+							<!-- right -->
+							<div class="cars-views-h5-product-list-item-bottom-right">
+								<div class="cars-views-h5-product-list-item-bottom-right-chat">
+									<img src="@/assets/slices3@2x.png" />
+								</div>
+								<div class="cars-views-h5-product-list-item-bottom-right-plus">
+									+
+								</div>
+							</div>
+						</div>
+					</div>
 				</li>
 			</ul>
 		</div>
