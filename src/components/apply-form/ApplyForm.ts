@@ -6,6 +6,6 @@
  */
 export class ApplyForm {
 	constructor() {
-		// hole
+		console.log('init sub controller');
 	}
 }
