@@ -63,6 +63,7 @@
 					</div>
 				</div>
 			</div>
+			<!-- banner -->
 			<div class="cards-fashion-show-right-banner">
 				<div class="cards-fashion-show-right-banner-container">
 					<img src="@/assets/fashion/banner.png" />
@@ -103,9 +104,38 @@
 					</ul>
 				</div>
 			</div>
-			<div class="cards-fashion-show-right-sub-nav">sub-nav</div>
-			<div class="cards-fashion-show-right-sub-nav">product</div>
-			<div class="cards-fashion-show-right-sub-nav">bottom</div>
+			<!-- sub-nav -->
+			<ul class="cards-fashion-show-right-sub-nav">
+				<li>
+					<a>
+						<img src="@/assets/fashion/fashion.png" />
+						<div class="cards-fashion-show-right-sub-nav-item">
+							<h1>QUALITY MATERIALS</h1>
+							<p>Gurnte 100% polyuretuned and 100% popular</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a>
+						<img src="@/assets/fashion/shipping.png" />
+						<div class="cards-fashion-show-right-sub-nav-item">
+							<h1>FREE SHIPPING</h1>
+							<p>We free shipping for all offers over $199</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a>
+						<img src="@/assets/fashion/shell.png" />
+						<div class="cards-fashion-show-right-sub-nav-item">
+							<h1>SECURE PAYMENT</h1>
+							<p>George 100% pure payment online on our website</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<div class="cards-fashion-show-right-product">product</div>
+			<div class="cards-fashion-show-right-bottom">bottom</div>
 		</div>
 	</div>
 </template>
