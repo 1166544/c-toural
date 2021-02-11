@@ -4,17 +4,17 @@ html,body {
 // container
 .cards-fashion-show {
 	background-color: #F2F5FA;
-	display: flex;
+	display: block;
 	height: 100%;
 
 	// left
 	.cards-fashion-show-left {
 		width: 220px;
+		height: 100%;
 		max-width: 220px;
 		min-width: 220px;
-		flex-basis: 220px;
+		float: left;
 		background-color: white;
-		height: 100%;
 		padding: 30px 15px 30px 15px;
 		display: flex;
 		flex-direction: column;
@@ -129,7 +129,9 @@ html,body {
 
 	// right
 	.cards-fashion-show-right {
-		padding: 30px 40px 30px 40px;
+		width: calc(100% - 220px);
 		height: 100%;
+		padding: 30px 40px 30px 40px;
+		float: left;
 	}
 }
