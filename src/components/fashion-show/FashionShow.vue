@@ -367,6 +367,9 @@
 					</li>
 				</ul>
 			</div>
+			<div class="cards-fashion-show-copyrights">
+				Copy rights @2021 trackthor all rights reserved.
+			</div>
 		</div>
 	</div>
 </template>
