@@ -30,9 +30,9 @@
 				</div>
 			</div>
 			<div class="cards-fashion-show-left-brand-bottom">
-				<h1>Idea-driven tool</h1>
+				<h1>{{ idealTitle }}</h1>
 				<p>Do you have any creative idea of how to add power to our TrackThor?Feel free to contact us</p>
-				<button>Write message</button>
+				<button @click="changeIdealTitle()">Write message</button>
 			</div>
 		</div>
 	</div>
@@ -47,6 +47,7 @@ import './FashionLeft.less';
 export default class FashionLeft extends Vue {
 	/** menus */
 	public menus: Array<IMenus> = [];
+	public idealTitle: string = 'Idea-driven tool';
 
 	constructor() {
 		super();
@@ -76,6 +77,11 @@ export default class FashionLeft extends Vue {
 				nameValue: 'Documents'
 			}
 		];
+	}
+
+	/** change title */
+	private changeIdealTitle(): void {
+		this.idealTitle = Math.random() < 0.5 ? this.idealTitle.toUpperCase() : this.idealTitle.toLowerCase();
 	}
 }
 
