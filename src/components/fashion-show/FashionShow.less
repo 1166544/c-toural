@@ -13,16 +13,13 @@ html,body {
 // container
 .cards-fashion-show {
 	background-color: #F2F5FA;
-	display: block;
-	height: 100%;
+	display: flex;
 
 	// left
 	.cards-fashion-show-left {
 		width: 220px;
-		height: 100%;
 		max-width: 220px;
 		min-width: 220px;
-		float: left;
 		background-color: white;
 		padding: 30px 15px 13px 15px;
 		display: flex;
@@ -139,9 +136,7 @@ html,body {
 	// right
 	.cards-fashion-show-right {
 		width: calc(100% - 220px);
-		height: 100%;
 		padding: 30px 40px 30px 40px;
-		float: left;
 
 		// right top
 		.cards-fashion-show-right-top {
@@ -457,7 +452,7 @@ html,body {
 
 				li {
 					margin-right: 20px;
-					background-color: #f5f7fa;
+					background-color: #fff;
 					border-radius: 8px;
 					width: 100%;
 					
@@ -483,7 +478,7 @@ html,body {
 							.cards-fashion-show-right-bottom-bottom-item-spa {
 								margin-right: 0;
 								padding: 10px 15px 10px 10px;
-								background-color: #E5F8FC;
+								background-color: RGBA(242, 237, 253, 1);
 								margin-bottom: 10px;
 
 								.cards-fashion-show-right-bottom-bottom-item-li {
@@ -517,6 +512,13 @@ html,body {
 										padding-left: 15px;
 									}
 								}
+							}
+
+							.cards-fashion-show-right-bottom-bottom-item-spa-green {
+								background-color: #EFF8F1;
+							}
+							.cards-fashion-show-right-bottom-bottom-item-spa-blue {
+								background-color: #E5F8FC;
 							}
 						}
 					}

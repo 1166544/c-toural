@@ -286,7 +286,7 @@
 								<h2>+</h2>
 							</div>
 							<ul>
-								<li class="cards-fashion-show-right-bottom-bottom-item-spa cards-fashion-show-right-bottom-bottom-item-spa-green">
+								<li class="cards-fashion-show-right-bottom-bottom-item-spa cards-fashion-show-right-bottom-bottom-item-spa-blue">
 									<a class="cards-fashion-show-right-bottom-bottom-item-li">
 										<div class="cards-fashion-show-right-bottom-bottom-item-li-left">
 											<div class="cards-fashion-show-right-bottom-bottom-item-li-round">
@@ -297,7 +297,7 @@
 										<h2>22:11</h2>
 									</a>
 								</li>
-								<li class="cards-fashion-show-right-bottom-bottom-item-spa">
+								<li class="cards-fashion-show-right-bottom-bottom-item-spa cards-fashion-show-right-bottom-bottom-item-spa-blue">
 									<a class="cards-fashion-show-right-bottom-bottom-item-li">
 										<div class="cards-fashion-show-right-bottom-bottom-item-li-left">
 											<div class="cards-fashion-show-right-bottom-bottom-item-li-round">
@@ -308,7 +308,7 @@
 										<h2>01.12</h2>
 									</a>
 								</li>
-								<li class="cards-fashion-show-right-bottom-bottom-item-spa">
+								<li class="cards-fashion-show-right-bottom-bottom-item-spa cards-fashion-show-right-bottom-bottom-item-spa-blue">
 									<a class="cards-fashion-show-right-bottom-bottom-item-li">
 										<div class="cards-fashion-show-right-bottom-bottom-item-li-left">
 											<div class="cards-fashion-show-right-bottom-bottom-item-li-round">
@@ -340,7 +340,7 @@
 										<h2>11kb</h2>
 									</a>
 								</li>
-								<li class="cards-fashion-show-right-bottom-bottom-item-spa">
+								<li class="cards-fashion-show-right-bottom-bottom-item-spa cards-fashion-show-right-bottom-bottom-item-spa-green">
 									<a class="cards-fashion-show-right-bottom-bottom-item-li">
 										<div class="cards-fashion-show-right-bottom-bottom-item-li-left">
 											<div class="cards-fashion-show-right-bottom-bottom-item-li-round">
@@ -351,7 +351,7 @@
 										<h2>2.45mb</h2>
 									</a>
 								</li>
-								<li class="cards-fashion-show-right-bottom-bottom-item-spa">
+								<li class="cards-fashion-show-right-bottom-bottom-item-spa cards-fashion-show-right-bottom-bottom-item-spa-green">
 									<a class="cards-fashion-show-right-bottom-bottom-item-li">
 										<div class="cards-fashion-show-right-bottom-bottom-item-li-left">
 											<div class="cards-fashion-show-right-bottom-bottom-item-li-round">
