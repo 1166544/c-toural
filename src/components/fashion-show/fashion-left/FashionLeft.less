@@ -1,0 +1,117 @@
+// left
+.cards-fashion-show-left {
+	width: 220px;
+	max-width: 220px;
+	min-width: 220px;
+	background-color: white;
+	padding: 30px 15px 13px 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	.cards-fashion-show-left-top {
+			.cards-fashion-show-left-logo {
+				display: flex;
+				justify-content: center;
+				padding-bottom: 40px;
+				img {
+					width: 100px;
+					height: 33px;
+				}
+			}
+	
+			// ul list
+			.cards-fashion-show-left-list {
+				li {
+					margin: 15px 0;
+					a {
+						display: flex;
+						align-items: center;
+						font-size: 12px;
+						color: #9BA6B2;
+						cursor: pointer;
+						padding: 8px 0 8px 20px;
+	
+						&:hover {
+							color: #000;	
+						}
+	
+						img {
+							width: 18px;
+							height: 18px;
+							background-color: yellow;
+							margin-right: 13px;
+						}
+					}
+				}
+				.cards-fashion-show-left-list-first {
+					background-color: black;
+					border-radius: 8px;
+	
+					a {
+						color: white;
+						&:hover {
+							color: white;	
+						}
+					}
+				}
+				.cards-fashion-show-left-list-sep1 {
+					padding-bottom: 20px;
+					border-bottom: solid 1px #DBE3E5;
+				}
+			}
+	}
+
+	.cards-fashion-show-left-brand {
+		font-size: 12px;
+		position: relative;
+		.cards-fashion-show-left-brand-top {
+			position: absolute;
+			top: -40px;
+			left: 52px;
+			.cards-fashion-show-left-brand-top-circle-outer {
+				background-color: #F2F5FA;
+				padding: 20px;
+				border-radius: 50px;
+				width: 84px;
+				.cards-fashion-show-left-brand-top-circle {
+					border: solid 10px white;
+					border-radius: 20px;
+					img {
+						width: 24px;
+						height: 24px;
+					}
+				}
+			}
+		}
+		.cards-fashion-show-left-brand-bottom {
+			background-color: #F2F5FA;
+			padding: 45px 15px 10px 15px;
+			border-radius: 8px;
+
+			h1 {
+				font-size: 15px;
+				text-align: center;
+				font-weight: bold;
+			}
+
+			p {
+				color: #838C95;
+				padding: 10px 0 25px 0;
+				line-height: 20px;
+				text-align: center;
+			}
+
+			button {
+				width: 150px;
+				background-color: white;
+				padding: 10px 15px 13px 15px;
+				border-radius: 5px;
+				&:hover {
+					background-color: #9BA6B2;
+					color: white;
+				}
+			};
+		}
+	}
+}
