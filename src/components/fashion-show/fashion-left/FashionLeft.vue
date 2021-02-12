@@ -5,23 +5,19 @@
 				<img src="@/assets/fashion/logo.png" />
 			</div>
 			<ul class="cards-fashion-show-left-list">
-				<li class="cards-fashion-show-left-list-first">
-					<a><img src="@/assets/fashion/home.png" class="cards-fashion-show-left-list-home" />Home</a>
-				</li>
-				<li>
-					<a><img src="@/assets/fashion/person.png" class="cards-fashion-show-left-list-project" />Clients</a>
-				</li>
-				<li>
-					<a><img src="@/assets/fashion/human.png" class="cards-fashion-show-left-list-time" />Time tracking</a>
-				</li>
-				<li class="cards-fashion-show-left-list-sep1">
-					<a><img src="@/assets/fashion/clock.png" class="cards-fashion-show-left-list-time" />Time tracking</a>
-				</li>
-				<li>
-					<a><img src="@/assets/fashion/keyboard.png" class="cards-fashion-show-left-list-hardware" />Hardware</a>
-				</li>
-				<li>
-					<a><img src="@/assets/fashion/document.png" class="cards-fashion-show-left-list-documents" />Documents</a>
+				<li
+					v-for="(value, index) in menus"
+					:key="value.nameValue"
+					v-bind:class="{ 'cards-fashion-show-left-list-first': index === 0, 'cards-fashion-show-left-list-sep1': index === 3 }"
+				>
+					<a>
+						<img src="@/assets/fashion/home.png" :class="value.imgClass" v-if="index === 0" />
+						<img src="@/assets/fashion/human.png" :class="value.imgClass" v-if="index === 1" />
+						<img src="@/assets/fashion/clock.png" :class="value.imgClass" v-if="index === 2" />
+						<img src="@/assets/fashion/keyboard.png" :class="value.imgClass" v-if="index === 3" />
+						<img src="@/assets/fashion/document.png" :class="value.imgClass" v-if="index === 4" />
+						{{ value.nameValue }}
+					</a>
 				</li>
 			</ul>
 		</div>
@@ -49,8 +45,43 @@ import './FashionLeft.less';
 /** fashion left */
 @Component
 export default class FashionLeft extends Vue {
+	/** menus */
+	public menus: Array<IMenus> = [];
+
 	constructor() {
 		super();
 	}
+
+	/** MOUNTED */
+	public mounted(): void {
+		this.menus = [
+			{
+				imgClass: 'cards-fashion-show-left-list-home',
+				nameValue: 'Home'
+			},
+			{
+				imgClass: 'cards-fashion-show-left-list-project',
+				nameValue: 'Clients'
+			},
+			{
+				imgClass: 'cards-fashion-show-left-list-time',
+				nameValue: 'Time tracking'
+			},
+			{
+				imgClass: 'cards-fashion-show-left-list-hardware',
+				nameValue: 'Hardware'
+			},
+			{
+				imgClass: 'cards-fashion-show-left-list-documents',
+				nameValue: 'Documents'
+			}
+		];
+	}
+}
+
+/** imenu */
+export interface IMenus {
+	imgClass: string;
+	nameValue: string;
 }
 </script>
