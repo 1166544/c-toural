@@ -6,7 +6,7 @@
 			</div>
 			<ul class="cards-fashion-show-left-list">
 				<li
-					v-for="(value, index) in menus"
+					v-for="(value, index) in navDataList"
 					:key="value.nameValue"
 					v-bind:class="{ 'cards-fashion-show-left-list-first': index === 0, 'cards-fashion-show-left-list-sep1': index === 3 }"
 				>
@@ -39,15 +39,18 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue } from 'vue-property-decorator';
 import './FashionLeft.less';
+import { IMenus } from '@/components/fashion-show/interfaces/IMenus';
 
 /** fashion left */
 @Component
 export default class FashionLeft extends Vue {
-	/** menus */
-	public menus: Array<IMenus> = [];
 	public idealTitle: string = 'Idea-driven tool';
+
+	/** menus */
+	@Prop()
+	public navDataList!: Array<IMenus>;
 
 	constructor() {
 		super();
@@ -55,39 +58,12 @@ export default class FashionLeft extends Vue {
 
 	/** created */
 	public created(): void {
-		this.menus = [
-			{
-				imgClass: 'cards-fashion-show-left-list-home',
-				nameValue: 'Home'
-			},
-			{
-				imgClass: 'cards-fashion-show-left-list-project',
-				nameValue: 'Clients'
-			},
-			{
-				imgClass: 'cards-fashion-show-left-list-time',
-				nameValue: 'Time tracking'
-			},
-			{
-				imgClass: 'cards-fashion-show-left-list-hardware',
-				nameValue: 'Hardware'
-			},
-			{
-				imgClass: 'cards-fashion-show-left-list-documents',
-				nameValue: 'Documents'
-			}
-		];
+		// hole
 	}
 
 	/** change title */
 	private changeIdealTitle(): void {
 		this.idealTitle = Math.random() < 0.5 ? this.idealTitle.toUpperCase() : this.idealTitle.toLowerCase();
 	}
-}
-
-/** imenu */
-export interface IMenus {
-	imgClass: string;
-	nameValue: string;
 }
 </script>

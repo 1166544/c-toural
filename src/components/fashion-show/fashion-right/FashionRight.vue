@@ -4,7 +4,7 @@
 		<FashionTop />
 
 		<!-- banner -->
-		<FashionBanner />
+		<FashionBanner :rightTrackList="pageData.rightTrackList" />
 
 		<!-- sub-nav -->
 		<FashionSubNav />
@@ -28,6 +28,7 @@ import FashionBottom from '@/components/fashion-show/fashion-right/fashion-botto
 import FashionProduct from '@/components/fashion-show/fashion-right/fashion-product/FashionProduct.vue';
 import FashionSubNav from '@/components/fashion-show/fashion-right/fashion-sub-nav/FashionSubNav.vue';
 import FashionTop from '@/components/fashion-show/fashion-right/fashion-top/FashionTop.vue';
+import { IPageData } from '@/components/fashion-show/interfaces/IPageData';
 
 /** fashion left */
 @Component({
@@ -41,6 +42,9 @@ import FashionTop from '@/components/fashion-show/fashion-right/fashion-top/Fash
 })
 export default class FashionRight extends Vue {
 	public yearsValue: string = '';
+
+	@Prop()
+	public pageData!: IPageData;
 
 	constructor() {
 		super();

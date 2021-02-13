@@ -1,10 +1,10 @@
 <template>
 	<div class="cards-fashion-show">
 		<!-- left container -->
-		<FashionLeft />
+		<FashionLeft :navDataList="pageData.navDataList" />
 
 		<!-- right container -->
-		<FashionRight />
+		<FashionRight :pageData="pageData" />
 	</div>
 </template>
 
@@ -14,6 +14,7 @@ import './FashionShow.less';
 import { FashionShow } from './FashionShow';
 import FashionLeft from '@/components/fashion-show/fashion-left/FashionLeft.vue';
 import FashionRight from '@/components/fashion-show/fashion-right/FashionRight.vue';
+import { IPageData } from '@/components/fashion-show/interfaces/IPageData';
 
 /** ApplyFormComponent */
 @Component({
@@ -25,10 +26,16 @@ import FashionRight from '@/components/fashion-show/fashion-right/FashionRight.v
 export default class ApplyFormComponent extends Vue {
 	@Prop() private msg!: string;
 
+	/** 页面数据结构 */
+	public pageData!: IPageData;
+
 	constructor() {
 		super();
+	}
 
-		console.log(new FashionShow());
+	/** init */
+	public created(): void {
+		this.pageData = new FashionShow().getPageData();
 	}
 }
 </script>
