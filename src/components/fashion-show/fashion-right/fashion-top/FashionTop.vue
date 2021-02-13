@@ -3,7 +3,8 @@
 		<div class="cards-fashion-show-right-top-search-box">
 			<form>
 				<img src="@/assets/fashion/search.png" />
-				<input placeholder="Enter search content here" />
+				<input placeholder="Enter search content here" v-model="inputMessage" />
+				<h1>{{ inputMessage }}</h1>
 			</form>
 		</div>
 		<div class="cards-fashion-show-right-top-right">
@@ -26,5 +27,8 @@ import './FashionTop.less';
 
 /** FashionTop */
 @Component
-export default class FashionTop extends Vue {}
+export default class FashionTop extends Vue {
+	/** 双向绑定 */
+	public inputMessage: string = '';
+}
 </script>
