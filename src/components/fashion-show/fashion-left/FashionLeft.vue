@@ -1,5 +1,5 @@
 <template>
-	<div class="cards-fashion-show-left">
+	<nav class="cards-fashion-show-left">
 		<div class="cards-fashion-show-left-top">
 			<div class="cards-fashion-show-left-logo">
 				<img src="@/assets/fashion/logo.png" />
@@ -35,7 +35,7 @@
 				<button @click="changeIdealTitle()">Write message</button>
 			</div>
 		</div>
-	</div>
+	</nav>
 </template>
 
 <script lang="ts">

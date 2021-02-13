@@ -16,7 +16,7 @@
 		<FashionBottom />
 
 		<!-- copyright -->
-		<div class="cards-fashion-show-copyrights">Copy rights @{{ years }} trackthor all rights reserved.</div>
+		<footer class="cards-fashion-show-copyrights">Copy rights @{{ years }} trackthor all rights reserved.</footer>
 	</div>
 </template>
 

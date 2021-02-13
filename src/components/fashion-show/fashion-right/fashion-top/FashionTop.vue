@@ -1,5 +1,5 @@
 <template>
-	<div class="cards-fashion-show-right-top">
+	<header class="cards-fashion-show-right-top">
 		<div class="cards-fashion-show-right-top-search-box">
 			<form>
 				<img src="@/assets/fashion/search.png" />
@@ -18,7 +18,7 @@
 				<img src="@/assets/fashion/arrowdown.png" />
 			</div>
 		</div>
-	</div>
+	</header>
 </template>
 
 <script lang="ts">
