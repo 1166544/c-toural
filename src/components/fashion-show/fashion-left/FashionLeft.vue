@@ -53,8 +53,8 @@ export default class FashionLeft extends Vue {
 		super();
 	}
 
-	/** MOUNTED */
-	public mounted(): void {
+	/** created */
+	public created(): void {
 		this.menus = [
 			{
 				imgClass: 'cards-fashion-show-left-list-home',
