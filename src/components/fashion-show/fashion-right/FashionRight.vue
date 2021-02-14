@@ -36,8 +36,8 @@ import { IPageData } from '@/components/fashion-show/interfaces/IPageData';
 		FashionBanner,
 		FashionBottom,
 		FashionProduct,
-		FashionSubNav,
-		FashionTop: (): any => import('./fashion-top/FashionTop.vue') // 动态载入组件
+		FashionTop: (): any => import('./fashion-top/FashionTop.vue'), // 动态载入组件
+		FashionSubNav: (): any => import('./fashion-sub-nav/FashionSubNav.vue') // 动态载入组件
 	}
 })
 export default class FashionRight extends Vue {
