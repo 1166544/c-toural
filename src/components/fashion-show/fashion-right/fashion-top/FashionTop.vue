@@ -3,7 +3,7 @@
 		<div class="cards-fashion-show-right-top-search-box">
 			<form>
 				<img src="@/assets/fashion/search.png" />
-				<input placeholder="Enter search content here" v-model="inputMessage" />
+				<input placeholder="Enter search content here" v-model="inputMessage" v-focus />
 				<h1>{{ inputMessage }}</h1>
 			</form>
 		</div>
