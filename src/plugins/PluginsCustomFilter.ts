@@ -1,18 +1,16 @@
 /**
- * 扩充全局过滤器
+ * 首字母大写过滤器
  *
- * @class CustomFilters
+ * @param {*} value
+ * @returns {*}
+ * @memberof PluginsCustomFilter
  */
-export class PluginCustomFilters {
-	/**
-	 * 全局过滤器
-	 *
-	 * @param {string} [source]
-	 * @param {string} [target]
-	 * @returns {*}
-	 * @memberof CustomFilters
-	 */
-	public globalFilters(source?: string, target?: string): any {
-		console.log('Some global func test.');
+export function capitalize(value: any): any {
+	if (!value) {
+		return;
 	}
+
+	const valueStr: string = value.toString();
+
+	return `${valueStr.charAt(0).toUpperCase()}${value.slice(1)}`;
 }

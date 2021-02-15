@@ -4,7 +4,7 @@
 			<form>
 				<img src="@/assets/fashion/search.png" />
 				<input placeholder="Enter search content here" v-model="inputMessage" v-focus />
-				<h1>{{ inputMessage }}</h1>
+				<h1>{{ inputMessage | captialize }}</h1>
 			</form>
 		</div>
 		<div class="cards-fashion-show-right-top-right">

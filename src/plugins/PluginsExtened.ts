@@ -1,7 +1,8 @@
 import DirectivesAutoFocus from '@/directives/DirectivesAutoFocus';
-import { PluginCustomFilters } from '@/plugins/PluginsCustomFilter';
+import { PluginsCustomGlobalFunc } from '@/plugins/PluginsCustomGlobalFunc';
 import { PluginsCustomFunc } from '@/plugins/PluginsCustomFunc';
 import { PluginsMixin } from '@/plugins/PluginsMixin';
+import { capitalize } from '@/plugins/PluginsCustomFilter';
 
 /**
  * 自定义插件
@@ -10,12 +11,12 @@ import { PluginsMixin } from '@/plugins/PluginsMixin';
  * @class PluginsExtened
  */
 class PluginsExtened {
-	public customFilters!: PluginCustomFilters;
+	public customGlobalFunc!: PluginsCustomGlobalFunc;
 	public customFunc!: PluginsCustomFunc;
 	public customMixin!: PluginsMixin;
 
 	constructor() {
-		this.customFilters = new PluginCustomFilters();
+		this.customGlobalFunc = new PluginsCustomGlobalFunc();
 		this.customFunc = new PluginsCustomFunc();
 		this.customMixin = new PluginsMixin();
 	}
@@ -27,7 +28,7 @@ class PluginsExtened {
 	 */
 	public install(vue: any, options: any): void {
 		/** 1.添加全局方法或 property */
-		vue.globalFilters = this.customFilters.globalFilters;
+		vue.globalFilters = this.customGlobalFunc.globalFilters;
 
 		// 2.注册全局资源
 		vue.directive('focus', DirectivesAutoFocus);
@@ -37,6 +38,9 @@ class PluginsExtened {
 
 		// 4.添加实例方法
 		vue.prototype.$customFunc = this.customFunc.invokeSome;
+
+		// 5.添加过滤器
+		vue.filter('captialize', capitalize);
 	}
 }
 
