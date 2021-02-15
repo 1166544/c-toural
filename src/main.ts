@@ -6,10 +6,10 @@ import store from './store';
 
 import '@/styles/StyleCommon.less';
 import '@/styles/StyleReset.less';
-import DirectivesAutoFocus from '@/directives/DirectivesAutoFocus';
+import PluginsExtened from '@/plugins/PluginsExtened';
 
-// 注册自定义指令
-Vue.directive('focus', DirectivesAutoFocus);
+// 注册自定义插件-包括混入、指令、扩充方法等
+Vue.use(PluginsExtened);
 
 // production tip
 Vue.config.productionTip = false;
