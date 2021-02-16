@@ -144,7 +144,9 @@
 		<!-- list end -->
 
 		<!-- bottom start -->
-		<footer class="circle-container-bottom"></footer>
+		<footer class="circle-container-bottom">
+			Welcome, sign in to continue
+		</footer>
 		<!-- bottom end -->
 	</div>
 </template>
