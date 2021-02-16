@@ -25,14 +25,14 @@ https://github.com/vuejs/vue-cli/issues/2463
 					'button-border-radius': '8px'
 				},
 				javascriptEnabled: true
-			}
+			},
 			// in pc mode, it is not fit to layout on wide screen changed.
-			// postcss: {
-			// 	plugins: [
-			// 		// 计设稿宽度1/10 默认75
-			// 		require('postcss-px2rem')({ remUnit: 75 })
-			// 	]
-			// }
+			postcss: {
+				plugins: [
+					// 计设稿宽度1/10 默认75
+					require('postcss-px2rem')({ remUnit: 75 })
+				]
+			}
 		}
 	},
 
