@@ -1,0 +1,132 @@
+@import '../CircleShow.less';
+
+// list start
+.circle-container-list {
+	.circle-container-list-top {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 60px 0 65px 0;
+		border-bottom: solid 1px #F3F3F7;
+		
+		.circle-container-list-top-circle {
+			padding: 25px 26px;
+			border-radius: 100px;
+			border: solid 3px #504C4C;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		h1 {
+			font-size: 28px;
+			color: #646468;
+			font-weight: bold;
+			padding-top: 60px;
+		}
+
+		p {
+			color: #CDD2DD;
+			font-size: 22px;
+			max-width: 280px;
+			text-align: center;
+			padding-top: 20px;
+		}
+	}
+
+	.circle-container-list-sub {
+		padding: 65px 0 0px 0;
+
+		h1 {
+			font-size: 48px;
+			font-weight: bold;
+			padding-left: 50px;
+		}
+		p {
+			padding-left: 50px;
+			padding-right: 50px;
+			padding-top: 20px;
+			font-size: 27px;
+			color: #8C94AA;
+			span {
+				color: #1C5CB0;
+				font-weight: bold;
+			}
+		}
+
+		ul {
+			padding-top: 100px;
+			padding-bottom: 30px;
+			border-bottom: solid 1px #F3F3F7;
+
+			li {
+				margin-bottom: 80px;
+				a {
+					display: flex;
+					align-items: flex-start;
+					justify-content: space-between;
+					padding: 0 0 0 40px;
+
+					.circle-container-list-sub-item {
+						padding-left: 15px;
+						h1 {
+							padding: 0 0 10px 0;
+							font-size: 10px;
+							color: #878BA5;
+						}
+						
+						.circle-container-list-sub-item-dot {
+							display: flex;
+							justify-content: flex-start;
+							align-items: center;
+
+							h2 {
+								padding-right: 5px;
+							}
+							.circle-container-list-sub-item-point {
+								width: 14px;
+								height: 14px;
+								background-color: #0449A7;
+								border-radius: 30px;
+							}
+						}
+
+						p {
+							padding: 5px 3px 0 0;
+							font-size: 24px;
+							color: #848589;
+							line-height: 30px;
+						}
+					}
+
+					.circle-container-list-sub-time {
+						font-size: 10px;
+						color: #ADB5B8;
+						min-width: 70px;
+						display: flex;
+						justify-content: flex-end;
+						padding-right: 20px;
+						min-width: 180px;
+					}
+
+					.circle-container-list-sub-avata {
+						padding: 15px 20px;
+						background-color: #E78665;
+						font-size: 26px;
+						color: white;
+						border-radius: 60px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					}
+
+					.circle-container-list-sub-item-fix {
+						padding-left: 20px;
+					}
+				}
+			}
+		}
+	}
+}
+// list end
