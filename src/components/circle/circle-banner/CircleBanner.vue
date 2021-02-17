@@ -19,6 +19,7 @@
 			<div class="circle-container-banner-box-container circle-container-banner-box-other">Other</div>
 		</div>
 		<div class="circle-container-banner-price">
+			{{ name }}
 			<h1>Amount</h1>
 			<h2>$250</h2>
 			<div class="circle-container-banner-ul">
@@ -68,8 +69,15 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import '@/components/circle/circle-banner/CircleBanner.less';
+import { namespace } from 'vuex-class';
+
+/** apps module */
+const appsModule: any = namespace('apps');
 
 /** circle banner */
 @Component
-export default class CircleBanner extends Vue {}
+export default class CircleBanner extends Vue {
+	@appsModule.State((state: any): any => state.name)
+	public name!: string;
+}
 </script>
