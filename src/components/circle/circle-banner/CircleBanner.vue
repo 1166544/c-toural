@@ -70,6 +70,7 @@
 import { Component, Vue } from 'vue-property-decorator';
 import '@/components/circle/circle-banner/CircleBanner.less';
 import { namespace } from 'vuex-class';
+import { IAppsState } from '@/store/modules/apps';
 
 /** apps module */
 const appsModule: any = namespace('apps');
@@ -77,7 +78,7 @@ const appsModule: any = namespace('apps');
 /** circle banner */
 @Component
 export default class CircleBanner extends Vue {
-	@appsModule.State((state: any): any => state.name)
+	@appsModule.State((state: IAppsState): any => state.name)
 	public name!: string;
 }
 </script>
