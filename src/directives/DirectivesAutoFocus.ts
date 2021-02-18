@@ -3,7 +3,8 @@ import { DirectiveBinding } from 'vue/types/options';
 import { VNode } from 'vue/types/vnode';
 
 /**
- * auto focus
+ * 自动获取焦点指令
+ * 使用: v-focus
  *
  * @export
  * @class DirectivesAutoFocus
