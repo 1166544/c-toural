@@ -31,7 +31,7 @@ export default class CircleTop extends Vue {
 
 		// 测试：一段时间后更改全局apps.state.name
 		setTimeout((): any => {
-			this.saveName('This is changed state name');
+			this.saveName('This is changed state name ');
 			console.log('Changedd name:: ', this.name);
 		}, 1000);
 	}
