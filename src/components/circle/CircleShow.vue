@@ -4,6 +4,10 @@
 		<CircleTop />
 		<!-- top end -->
 
+		<!-- cover start -->
+		<CircleCover />
+		<!-- cover end -->
+
 		<!-- banner start -->
 		<CircleBanner />
 		<!-- banner end -->
@@ -26,6 +30,7 @@ import CircleTop from '@/components/circle/circle-top/CircleTop.vue';
 import CircleBanner from '@/components/circle/circle-banner/CircleBanner.vue';
 import CircleList from '@/components/circle/circle-list/CircleList.vue';
 import CircleBottom from '@/components/circle/circle-bottom/CircleBottom.vue';
+import CircleCover from '@/components/circle/circle-cover/CircleCover.vue';
 
 /** circle */
 @Component({
@@ -33,7 +38,8 @@ import CircleBottom from '@/components/circle/circle-bottom/CircleBottom.vue';
 		CircleTop,
 		CircleBanner,
 		CircleList,
-		CircleBottom
+		CircleBottom,
+		CircleCover
 	}
 })
 export default class CircleShow extends Vue {
