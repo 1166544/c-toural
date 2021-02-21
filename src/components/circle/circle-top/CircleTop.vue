@@ -17,7 +17,7 @@ const appsModule: any = namespace('apps');
 /** circle top */
 @Component
 export default class CircleTop extends Vue {
-	/** 访问apps.state.name */
+	/** 访问apps.state.name  */
 	@appsModule.State((state: IAppsState): any => state.name)
 	public name!: string;
 
