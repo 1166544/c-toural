@@ -31,6 +31,7 @@ import CircleBanner from '@/components/circle/circle-banner/CircleBanner.vue';
 import CircleList from '@/components/circle/circle-list/CircleList.vue';
 import CircleBottom from '@/components/circle/circle-bottom/CircleBottom.vue';
 import CircleCover from '@/components/circle/circle-cover/CircleCover.vue';
+import { FashionShowGreeter } from '@/components/fashion-show/FashionShowGreeter';
 
 /** circle */
 @Component({
@@ -45,6 +46,14 @@ import CircleCover from '@/components/circle/circle-cover/CircleCover.vue';
 export default class CircleShow extends Vue {
 	constructor() {
 		super();
+
+		/** 实例化调用 */
+		const fashionGreeting: FashionShowGreeter<string> = new FashionShowGreeter<string>('String test');
+		console.log(fashionGreeting.greet());
+
+		/** 实例化调用 */
+		const fashionGreetingNumbrer: FashionShowGreeter<number> = new FashionShowGreeter<number>(123);
+		console.log(fashionGreetingNumbrer.greet());
 	}
 }
 </script>
