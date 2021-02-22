@@ -47,7 +47,7 @@ export default class CircleShow extends Vue {
 	constructor() {
 		super();
 
-		/** 实例化调用 */
+		/** 实例化调用  */
 		const fashionGreeting: FashionShowGreeter<string> = new FashionShowGreeter<string>('String test');
 		console.log(fashionGreeting.greet());
 
