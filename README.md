@@ -24,7 +24,7 @@
     ├── main.ts                     // 脚本主入口
     ├── shims-tsx.d.ts              // ts补充声明
     ├── shims-vue.d.ts              // VUE自定义声明
-├── package.json                    // 依赖
+├── package.json                    // 依赖 
 ├── README.md                       // 项目 readme
 ├── tsconfig.json                   // ts 配置
 ├── tslint.json                     // tslint 配置
