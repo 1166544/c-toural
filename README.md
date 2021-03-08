@@ -1,7 +1,7 @@
 # A Vue2.6 project base on TypeScript.
 
 ### 项目预览 
-| 预览图1 | 预览图2 | 预览图3 |
+| 预览图1 | 预览图2 | 预览图3 | 
 | ---- | ---- | ---- |
 | ![preview](/docs/WX20210217-210316@2x.png) | ![proview]('/../docs/WX20210217-210343@2x.png) | ![proview](/docs/WX20210217-210400@2x.png) |
 
