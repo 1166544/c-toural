@@ -1,8 +1,0 @@
-/**
- * 
- *
- * @class BinaryTreeNode
- */
-class BinaryTreeNode {
-
-}
