@@ -1,5 +1,5 @@
 import { ConfigDefault } from '@/config/ConfigDefault';
-import { MockBase, IMock, IMockData } from '@fdd-components/fdd-identify-lib/src/core/mocks/MockBase';
+import { MockBase, IMock, IMockData } from '@u-core/libs/src/core/mocks/MockBase';
 
 /**
  * MockServiceH5 mock
@@ -8,7 +8,6 @@ import { MockBase, IMock, IMockData } from '@fdd-components/fdd-identify-lib/src
  * @class MockServiceH5
  */
 export class MockServiceH5 extends MockBase {
-
 	constructor() {
 		super(ConfigDefault.DEFAULT_CHANNEL);
 	}
@@ -23,8 +22,7 @@ export class MockServiceH5 extends MockBase {
 		this.mockList.push({
 			url: 'api/v1/topics',
 			method: MockBase.GET,
-			responseData:
-			{
+			responseData: {
 				id: '5fdb44d70f99cb37f45e3410',
 				author_id: '56f3686f02c237a73a1a8acf',
 				tab: 'share',

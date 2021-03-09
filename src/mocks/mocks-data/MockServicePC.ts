@@ -1,5 +1,5 @@
 import { ConfigDefault } from '@/config/ConfigDefault';
-import { MockBase, IMock, IMockData } from '@fdd-components/fdd-identify-lib/src/core/mocks/MockBase';
+import { MockBase, IMock, IMockData } from '@u-core/libs/src/core/mocks/MockBase';
 
 /**
  * MockServicePC mock

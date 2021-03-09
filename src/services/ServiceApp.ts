@@ -1,4 +1,4 @@
-import { ServiceTransport } from '@fdd-components/fdd-identify-lib/src/core/services/ServiceTransport';
+import { ServiceTransport } from '@u-core/libs/src/core/services/ServiceTransport';
 import { ConfigDefault } from '../config/ConfigDefault';
 
 /**

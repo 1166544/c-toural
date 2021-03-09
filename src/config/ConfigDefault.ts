@@ -1,10 +1,9 @@
-import { IConfig } from '@fdd-components/fdd-identify-lib/src/core/bootstrap/BootstrapEnvironment';
+import { IConfig } from '@u-core/libs/src/core/bootstrap/BootstrapEnvironment';
 
 /**
  * config default
  */
 export class ConfigDefault<T> implements IConfigData {
-
 	/**
 	 * 当前语言环境
 	 *

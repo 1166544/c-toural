@@ -4,9 +4,9 @@ import App from '@/App.vue';
 import router from '@/router';
 import store from '@/store';
 
-import bootstrap from '@fdd-components/fdd-identify-lib/src/core/bootstrap/Bootstrap';
-import { enviroment } from '@fdd-components/fdd-identify-lib/src/core/bootstrap/BootstrapEnvironment';
-import { i18n, translate } from '@fdd-components/fdd-identify-lib/src/h5/i18n';
+import bootstrap from '@u-core/libs/src/core/bootstrap/Bootstrap';
+import { enviroment } from '@u-core/libs/src/core/bootstrap/BootstrapEnvironment';
+import { i18n, translate } from '@u-core/libs/src/h5/i18n';
 
 import '@/styles/StyleCommon.less';
 import '@/styles/StyleReset.less';
