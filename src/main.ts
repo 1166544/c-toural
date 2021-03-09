@@ -6,11 +6,11 @@ import store from '@/store';
 
 import bootstrap from '@u-core/libs/src/core/bootstrap/Bootstrap';
 import { enviroment } from '@u-core/libs/src/core/bootstrap/BootstrapEnvironment';
-import { i18n, translate } from '@u-core/libs/src/h5/i18n';
+import { i18n, translate } from '@/i18n';
 
 import '@/styles/StyleCommon.less';
 import '@/styles/StyleReset.less';
-import PluginsExtened from '@/plugins/PluginsExtened';
+import PluginsExtened from '@u-core/libs/src/core/plugins/PluginsExtened';
 
 // 配置系统
 import { ConfigDev } from './config/ConfigDev';
