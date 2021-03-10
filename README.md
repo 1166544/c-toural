@@ -28,14 +28,14 @@
 ├── README.md                       // 项目 readme
 ├── tsconfig.json                   // ts 配置
 ├── tslint.json                     // tslint 配置
-└── vue.config.js                   // 扩展webpack 配置
+└── vue.config.js                   // 扩展webpack 配置 
 ```
 
 <br/>
 
 ### 本地开发
 ```
-npm run dev
+npm run dev 
 ```
 
 <br/>
