@@ -1,8 +1,7 @@
 <template>
 	<div>
-		<hr />
 		A Bar component with the title:
-		<h2>{{ renderData.title }}</h2>
+		<span>{{ renderData.title }}</span>
 	</div>
 </template>
 

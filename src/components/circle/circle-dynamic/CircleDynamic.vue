@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="circle-dynamic-container">
 		<!-- 动态渲染模板 -->
 		<template v-for="item in contentData.content.body">
 			<component :is="item.component" :renderData="item" :key="item.uuid"></component>

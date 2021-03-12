@@ -1,8 +1,7 @@
 <template>
 	<div>
-		<hr />
-		A Foo component with the title:
-		<h2>{{ renderData.headline }}</h2>
+		A Foo component with the dynamic:
+		<span>{{ renderData.headline }}</span>
 	</div>
 </template>
 
