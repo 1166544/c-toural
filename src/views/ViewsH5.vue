@@ -7,7 +7,7 @@
 <script lang="ts">
 import { Component, Emit, Prop, Ref, Vue, Watch } from 'vue-property-decorator';
 // import ApplyForm from '@/components/apply-form/ApplyForm.vue';
-import FashionShow from '@/components/fashion-show/FashionShow.vue';
+// import FashionShow from '@/components/fashion-show/FashionShow.vue';
 import CircleShow from '@/components/circle/CircleShow.vue';
 
 /** css layout */

@@ -5,7 +5,7 @@
 		<!-- top end -->
 
 		<!-- cover start -->
-		<CircleCover />
+		<!-- <CircleCover /> -->
 		<!-- cover end -->
 
 		<!-- banner start -->
