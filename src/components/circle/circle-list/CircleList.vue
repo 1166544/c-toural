@@ -13,8 +13,11 @@
 			<ul>
 				<li v-for="item in renderList" :key="item.title">
 					<a>
+						<!-- 标题 -->
 						<img :src="item.src" v-if="item.src" />
 						<div class="circle-container-list-sub-avata" v-if="!item.src">J</div>
+
+						<!-- 说明 -->
 						<div class="circle-container-list-sub-item" v-if="item.desc">
 							<h1>{{ item.title }}</h1>
 							<div class="circle-container-list-sub-item-dot">
@@ -28,6 +31,8 @@
 							<h2>{{ item.subTitle }}</h2>
 							<p></p>
 						</div>
+
+						<!-- 时间 -->
 						<div class="circle-container-list-sub-time">{{ item.time }}</div>
 					</a>
 				</li>
