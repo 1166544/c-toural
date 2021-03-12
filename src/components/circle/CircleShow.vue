@@ -1,5 +1,8 @@
 <template>
 	<div class="circle-container">
+		<!-- 动态渲染 -->
+		<CircleDynamic />
+
 		<!-- top start -->
 		<CircleTop />
 		<!-- top end -->
@@ -31,6 +34,7 @@ import CircleBanner from '@/components/circle/circle-banner/CircleBanner.vue';
 import CircleList from '@/components/circle/circle-list/CircleList.vue';
 import CircleBottom from '@/components/circle/circle-bottom/CircleBottom.vue';
 import CircleCover from '@/components/circle/circle-cover/CircleCover.vue';
+import CircleDynamic from '@/components/circle/circle-dynamic/CircleDynamic.vue';
 import { FashionShowGreeter } from '@/components/fashion-show/FashionShowGreeter';
 
 /** circle */
@@ -40,7 +44,8 @@ import { FashionShowGreeter } from '@/components/fashion-show/FashionShowGreeter
 		CircleBanner,
 		CircleList,
 		CircleBottom,
-		CircleCover
+		CircleCover,
+		CircleDynamic
 	}
 })
 export default class CircleShow extends Vue {
