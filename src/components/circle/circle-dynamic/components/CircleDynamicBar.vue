@@ -9,7 +9,7 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import { IContentItemStructs } from '@/components/circle/circle-dynamic/CircleDynamic.vue';
 
-/** 动态渲染组件 Bar */
+/** 动态渲染组件Bar */
 @Component
 export default class CircleDynamicBar extends Vue {
 	@Prop()
