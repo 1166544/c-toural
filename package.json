@@ -49,11 +49,5 @@
 		"mockjs": "1.1.0",
 		"typescript": "3.9.3",
 		"vue-template-compiler": "2.6.11"
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": ["npm run lint"],
-			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-		}
 	}
 }

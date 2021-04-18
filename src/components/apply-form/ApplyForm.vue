@@ -75,9 +75,7 @@
 					<h1>BEING PROCESSED</h1>
 					<h3>June 28, 2021 10:14 PM</h3>
 				</div>
-				<div class="cars-views-h5-product-list-right-title">
-					ORDER IS ACCEPTED
-				</div>
+				<div class="cars-views-h5-product-list-right-title">ORDER IS ACCEPTED</div>
 			</div>
 			<!-- url list -->
 			<ul class="cars-views-h5-product-list-ul">
@@ -109,9 +107,7 @@
 								<div class="cars-views-h5-product-list-item-bottom-right-chat">
 									<img src="@/assets/slices3@2x.png" />
 								</div>
-								<div class="cars-views-h5-product-list-item-bottom-right-plus">
-									+
-								</div>
+								<div class="cars-views-h5-product-list-item-bottom-right-plus">+</div>
 							</div>
 						</div>
 					</div>
@@ -143,9 +139,7 @@
 								<div class="cars-views-h5-product-list-item-bottom-right-chat">
 									<img src="@/assets/slices3@2x.png" />
 								</div>
-								<div class="cars-views-h5-product-list-item-bottom-right-plus">
-									+
-								</div>
+								<div class="cars-views-h5-product-list-item-bottom-right-plus">+</div>
 							</div>
 						</div>
 					</div>

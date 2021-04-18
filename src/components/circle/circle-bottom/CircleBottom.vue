@@ -1,7 +1,5 @@
 <template>
-	<footer class="circle-container-bottom">
-		Welcome, sign in to continue
-	</footer>
+	<footer class="circle-container-bottom">Welcome, sign in to continue</footer>
 </template>
 
 <script lang="ts">

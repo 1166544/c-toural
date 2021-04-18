@@ -7,7 +7,7 @@ import { ConfigDefault, IChannel, IConfigData } from './ConfigDefault';
  * @class ConfigTest
  * @extends {ConfigDefault}
  */
-export class  ConfigTest extends ConfigDefault<IConfigData> {
+export class ConfigTest extends ConfigDefault<IConfigData> {
 	constructor() {
 		super();
 	}
