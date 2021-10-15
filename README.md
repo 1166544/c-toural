@@ -28,7 +28,7 @@
 ├── README.md                       // 项目 readme
 ├── tsconfig.json                   // ts 配置
 ├── tslint.json                     // tslint 配置
-└── vue.config.js                   // 扩展webpack 配置 
+└── vue.config.js                   // 扩展webpack 配置  
 ```
 
 <br/>
