@@ -4,7 +4,7 @@ import { ConfigDefault } from '@/config/ConfigDefault';
  * APP服务 mock
  *
  * @export
- * @class MockServiceApp
+ * @class MockServiceApp 
  */
 export class MockServiceApp extends MockBase {
 	constructor() {
