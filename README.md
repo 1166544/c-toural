@@ -9,7 +9,7 @@
 
 ## 目录结构  
 ```
-├── public                          // 静态页面 
+├── public                          // 静态页面  
 ├── src                             // 主目录
     ├── assets                      // 静态资源
     ├── components                  // 通用组件
