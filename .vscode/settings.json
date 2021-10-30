@@ -1,6 +1,5 @@
 {
 	/**  vscode 系统配置项 */
-	"window.zoomLevel": 0,
 	"files.autoSave": "afterDelay",
 	"explorer.confirmDelete": false,
 	"explorer.confirmDragAndDrop": false,
