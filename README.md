@@ -11,7 +11,7 @@
 ```
 ├── public                          // 静态页面  
 ├── src                             // 主目录
-    ├── assets                      // 静态资源
+    ├── assets                      // 静态资源 
     ├── components                  // 通用组件
     ├── directives                  // 通用指令
     ├── plugins                     // 通用插件
